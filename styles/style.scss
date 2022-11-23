@@ -1,7 +1,117 @@
+@font-face {
+  font-family: Spotnik;
+  src: url(/assets/fonts/SPOTNIK.otf);
+}
+@font-face {
+  font-family: Spotnik;
+  src: url(/assets/fonts/SPOTNIK-Bold.otf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: Roboto;
+  src: url(/assets/fonts/Roboto-Thin.ttf);
+  font-weight: 100;
+}
+@font-face {
+  font-family: Roboto;
+  src: url(/assets/fonts/Roboto-Light.ttf);
+  font-weight: 300;
+}
+@font-face {
+  font-family: Roboto;
+  src: url(/assets/fonts/Roboto-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: Roboto;
+  src: url(/assets/fonts/Roboto-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: Roboto;
+  src: url(/assets/fonts/Roboto-Bold.ttf);
+  font-weight: 700;
+}
+
 *,
 *::before,
 *::after {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #00a66a;
+  --color-secondary: #0056a6;
+  --color-dark: #1e474b;
+  --color-black: #000000;
+  --color-white: #ffffff;
+
+  --gradient-primary: linear-gradient(
+    180deg,
+    var(--color-primary) 0%,
+    var(--color-secondary) 100%
+  );
+
+  --font-main: Roboto, sans-serif;
+  --font-spot: Spotnik, sans-serif;
+
+  --shadow-main: -4px 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+html {
+  font-family: var(--font-main);
+}
+
+body {
+  background: var(--gradient-primary);
+  height: 150vh;
+  width: 100vw;
+
+  position: relative;
+}
+
+h1 {
+  font-family: var(--font-spot);
+  font-weight: bold;
+}
+
+header {
+  width: 100%;
+  height: 5em;
+  background-color: var(--color-black);
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  height: 5em;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  bottom: 0;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 2em;
+
+  background-color: var(--color-primary);
+  border: 0.1em solid var(--color-white);
+
+  box-shadow: var(--shadow-main);
+
+  border-radius: 2em;
+
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 1.5em;
+  letter-spacing: 0.06em;
+  cursor: pointer;
 }
