@@ -19,10 +19,10 @@
   </head>
   <body>
     <header>
-      <picture>
-        <img src="" alt="" />
+      <picture id="header-logo">
+        <img src="/assets/logos/futeum_emblem_9.svg" alt="" />
       </picture>
-      <nav>
+      <!-- <nav>
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">About</a></li>
@@ -30,11 +30,39 @@
           <li><a href="#">Tickets</a></li>
           <li><a href="#">Cart</a></li>
         </ul>
-      </nav>
+      </nav> -->
+      <picture id="hamburger-menu">
+        <a href="#">
+        <img src="/assets/icons/icon_hamburger.svg" alt=""></a>
+      </picture>
     </header>
     <main>
-      <h1>Futeum</h1>
-      <button class="button">Book free tickets now</button>
+      <div class="hero-container">
+        <picture class="hero-image">
+          <img src="./assets/images/Exhibitions.jpg" alt="">
+        </picture>
+        <div class="hero-text">
+          <h1>Exhibitions</h1>
+          <h2>at <span>Futeum</span></h2>
+        </div>
+      </div>
+      <ul class="jump-to-links">
+        <li>Jump to:</li>
+        <li><a href="#">Cosmology</a></li>
+        <li><a href="#">Evolution</a></li>
+        <li><a href="#">Biology and Medicine</a></li>
+        <li><a href="#">Robotics and AI</a></li>
+        <li><a href="#">Ecology</a></li>
+      </ul>
+      <section>
+        <div class="card" id="cosmology">
+          <picture>
+            <img src="/assets/images/Cosmology.jpg" alt="">
+          </picture>
+          <h3>Cosmology</h3>
+        </div>
+      </section>
+      <!-- <button class="button">Book free tickets now</button> -->
     </main>
     <footer>
       Futeum &#169 2022
