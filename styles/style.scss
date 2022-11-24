@@ -64,7 +64,7 @@ html {
 
 body {
   background: $gradient-primary;
-  height: 150vh;
+  height: 5500px;
   width: 100%;
 
   position: relative;
@@ -135,7 +135,7 @@ footer {
 
   margin-top: 5em;
 
-  position: relative;
+  position: absolute;
   bottom: 0;
 }
 
@@ -159,6 +159,13 @@ footer {
   cursor: pointer;
 }
 
+@mixin headerHighlight($inlinePadding) {
+  background: $color-dark;
+  display: inline;
+  box-shadow: $shadow-main;
+  padding-inline: $inlinePadding;
+}
+
 .hero-container {
   position: relative;
   margin-bottom: 4em;
@@ -168,7 +175,7 @@ footer {
   }
 
   .hero-text {
-    // transform: translateY(-60%);
+    // transform: translateY(-85%);
     position: absolute;
     bottom: -2em;
 
@@ -177,10 +184,7 @@ footer {
     }
 
     h2 {
-      padding-inline: 0.1em;
-      background: $color-dark;
-      display: inline;
-      box-shadow: $shadow-main;
+      @include headerHighlight(0.1em);
     }
 
     span {
@@ -201,14 +205,80 @@ footer {
 }
 
 .card {
+  margin-top: 10em;
+  // aspect-ratio: 4/5;
   width: 90%;
   margin-inline: 5%;
-  height: 600px;
-  background-color: #000000;
+
+  background-color: $color-black;
   border-radius: 2em;
+
+  box-shadow: $shadow-main;
 
   img {
     width: 100%;
-    border-radius: 2em;
+    // border-radius: 2em;
   }
+
+  .image-container {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 2em;
+
+    .card-foreground {
+      position: absolute;
+      // display: none;
+      z-index: 3;
+      bottom: 0;
+    }
+    .card-midground {
+      position: absolute;
+      z-index: 2;
+      bottom: 0;
+    }
+
+    .card-background {
+      position: relative;
+    }
+  }
+
+  // @keyframes background {
+  //   0% {
+  //     transform: scale(1);
+  //   }
+  //   100% {
+  //     transform: scale(1.5) rotate(15deg);
+  //   }
+  // }
+
+  .card-text {
+    position: relative;
+    z-index: 3;
+  }
+
+  .card-title {
+    @include headerHighlight(0.3em);
+    font-weight: 400;
+
+    top: -0.8em;
+    position: absolute;
+  }
+
+  .card-info {
+    color: $color-white;
+    padding: 2em 1em 1em 1em;
+    line-height: 120%;
+    text-align: justify;
+  }
+}
+
+.human6 {
+  display: flex;
+  // width: 50%;
+}
+
+.image {
+  width: 100%;
+  fill: #000000;
 }

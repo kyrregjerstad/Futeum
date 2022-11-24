@@ -13,6 +13,18 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/Flip.min.js"
       defer
     ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollToPlugin.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/TextPlugin.min.js"
+      defer
+    ></script>
 
     <script src="/app/script.js" type="module"></script>
     <link rel="stylesheet" href="/styles/style.css" />
@@ -32,40 +44,101 @@
         </ul>
       </nav> -->
       <picture id="hamburger-menu">
-        <a href="#">
-        <img src="/assets/icons/icon_hamburger.svg" alt=""></a>
+        <a href="#"> <img src="/assets/icons/icon_hamburger.svg" alt="" /></a>
       </picture>
     </header>
     <main>
       <div class="hero-container">
         <picture class="hero-image">
-          <img src="./assets/images/Exhibitions.jpg" alt="">
+          <img src="./assets/images/Exhibitions.jpg" alt="" />
         </picture>
         <div class="hero-text">
           <h1>Exhibitions</h1>
           <h2>at <span>Futeum</span></h2>
         </div>
       </div>
-      <ul class="jump-to-links">
+      <!-- <ul class="jump-to-links">
         <li>Jump to:</li>
         <li><a href="#">Cosmology</a></li>
         <li><a href="#">Evolution</a></li>
         <li><a href="#">Biology and Medicine</a></li>
         <li><a href="#">Robotics and AI</a></li>
         <li><a href="#">Ecology</a></li>
-      </ul>
-      <section>
-        <div class="card" id="cosmology">
+      </ul> -->
+      <article class="card" id="cosmology">
+        <div class="image-container">
           <picture>
-            <img src="/assets/images/Cosmology.jpg" alt="">
+            <img
+              class="card-foreground scroll-anim-a"
+              src="/assets/images/Cosmology-layer-1.webp"
+              alt=""
+            />
           </picture>
-          <h3>Cosmology</h3>
+          <picture>
+            <img
+              class="card-background scroll-anim-b"
+              src="/assets/images/Cosmology-layer-2.webp"
+              alt=""
+            />
+          </picture>
         </div>
-      </section>
+        <section class="card-text">
+          <h3 class="card-title">Cosmology</h3>
+          <p class="card-info">
+            Explore the wonders of our cosmos. Our fantastic exhibition, ‘The
+            Sky Above Us’, explores the night sky and what we can see and know
+            about the universe around us. We’ll locate the various
+            constellations and galaxies that can be seen and learn a bit about
+            the early navigators who used the stars to travel by. Follow the
+            journey of our solar exploration: from early Arab traders, to
+            Galileo’s telescope, to the latest exploration of the planets in our
+            solar system.
+          </p>
+        </section>
+      </article>
+      <article class="card" id="evolution">
+        <div class="image-container">
+          <picture>
+            <img
+              class="card-foreground scroll-anim-c"
+              src="/assets/images/evolution-front.webp"
+              alt=""
+            />
+          </picture>
+          <picture>
+            <img
+              class="card-midground scroll-anim-d"
+              src="/assets/images/evolution-mid.webp"
+              alt=""
+            />
+          </picture>
+          <picture>
+            <img
+              class="card-background"
+              src="/assets/images/evolution-back.webp"
+              alt=""
+            />
+          </picture>
+        </div>
+        <section class="card-text">
+          <h3 class="card-title">Evolution</h3>
+          <p class="card-info">
+            Explore the wonders of our cosmos. Our fantastic exhibition, ‘The
+            Sky Above Us’, explores the night sky and what we can see and know
+            about the universe around us. We’ll locate the various
+            constellations and galaxies that can be seen and learn a bit about
+            the early navigators who used the stars to travel by. Follow the
+            journey of our solar exploration: from early Arab traders, to
+            Galileo’s telescope, to the latest exploration of the planets in our
+            solar system.
+          </p>
+        </section>
+      </article>
       <!-- <button class="button">Book free tickets now</button> -->
     </main>
     <footer>
-      Futeum &#169 2022
+      <!-- <p>Futeum &#169 2022</p> -->
+      <p>Futeum 2022</p>
     </footer>
   </body>
 </html>
