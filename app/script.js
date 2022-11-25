@@ -42,7 +42,7 @@ timeline.to(".scroll-anim-d", {
     scrub: 3,
   },
   duration: 5,
-  scale: 1.08,
+  scale: 1.03,
   // x: 10,
   // y: -120,
 });

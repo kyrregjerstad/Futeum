@@ -189,6 +189,7 @@ footer {
   position: absolute;
   z-index: 2;
   bottom: 0;
+  transform-origin: center left;
 }
 .card .image-container .card-background {
   position: relative;
