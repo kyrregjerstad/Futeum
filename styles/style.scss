@@ -41,6 +41,8 @@ $color-black: #000000;
 $color-white: #ffffff;
 $inline-padding: 10px;
 
+$hr: 3px solid rgba(255, 255, 255, 0.5);
+
 $gradient-primary: linear-gradient(
   180deg,
   $color-primary 0%,
@@ -51,6 +53,31 @@ $font-main: Roboto, sans-serif;
 $font-spot: Spotnik, sans-serif;
 
 $shadow-main: -4px 4px 6px rgba(0, 0, 0, 0.15);
+
+@mixin highlighter {
+  background: $color-dark-semiTrans;
+  backdrop-filter: blur(5px);
+  box-shadow: $shadow-main;
+}
+
+@mixin headerHighlight() {
+  background: $color-dark;
+  display: inline;
+  box-shadow: $shadow-main;
+  padding-inline: 10px;
+}
+
+@mixin flexCenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin glassMorphism {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  box-shadow: $shadow-main;
+}
 
 *,
 *::before,
@@ -65,11 +92,9 @@ html {
 }
 
 body {
-  background: $gradient-primary;
-  height: 5500px;
-  width: 100%;
-
   position: relative;
+  background: $gradient-primary;
+  width: 100%;
 }
 
 a {
@@ -82,23 +107,33 @@ ul {
 }
 
 h1 {
-  font-size: 4em;
-  font-weight: bold;
+  letter-spacing: 0.2em;
+  font-size: 3em;
   color: $color-white;
 }
 
 h2 {
-  color: $color-white;
+  font-size: 1.5em;
+  line-height: 0.5em;
+  letter-spacing: 0.15em;
   font-weight: 300;
-  font-size: 4em;
+  text-transform: uppercase;
+  color: $color-white;
 }
 
 h3 {
-  color: $color-white;
   font-size: 3em;
+  color: $color-white;
+  padding-inline: $inline-padding;
 }
 
 h4 {
+  font-size: 2em;
+  color: $color-white;
+  font-weight: 200;
+  @include highlighter();
+  display: inline-block;
+  padding-inline: $inline-padding;
 }
 
 h5 {
@@ -112,18 +147,16 @@ span {
 
 img {
   max-width: 100%;
+  object-fit: cover;
 }
 
-@mixin flexCenter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+button {
+  cursor: pointer;
 }
 
 header {
   @include flexCenter();
   justify-content: space-between;
-
   width: 100%;
   height: 5em;
   background-color: $color-black;
@@ -141,34 +174,13 @@ header {
   }
 }
 
-footer {
-  width: 100%;
-  display: flex;
-  height: 5em;
-  background-color: $color-black;
-  color: $color-white;
-  justify-content: center;
-  align-items: center;
-
-  margin-top: 5em;
-
-  position: absolute;
-  bottom: 0;
-}
-
 .button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexCenter();
   padding: 1em 2em;
-
   background-color: $color-primary;
   border: 0.1em solid $color-white;
-
   box-shadow: $shadow-main;
-
   border-radius: 2em;
-
   color: $color-white;
   font-weight: 700;
   font-size: 1.5em;
@@ -176,23 +188,11 @@ footer {
   cursor: pointer;
 }
 
-@mixin headerHighlight($inlinePadding) {
-  background: $color-dark;
-  display: inline;
-  box-shadow: $shadow-main;
-  padding-inline: $inlinePadding;
-}
-
 .hero-container {
   position: relative;
   margin-bottom: 4em;
 
-  .hero-image img {
-    width: 100%;
-  }
-
   .hero-text {
-    // transform: translateY(-85%);
     position: absolute;
     bottom: -2em;
 
@@ -201,7 +201,7 @@ footer {
     }
 
     h2 {
-      @include headerHighlight(0.1em);
+      @include headerHighlight();
     }
 
     span {
@@ -223,7 +223,6 @@ footer {
 
 .card {
   margin-top: 10em;
-  // aspect-ratio: 4/5;
   width: 90%;
   margin-inline: 5%;
 
@@ -234,7 +233,6 @@ footer {
 
   img {
     width: 100%;
-    // border-radius: 2em;
   }
 
   .image-container {
@@ -276,7 +274,7 @@ footer {
   }
 
   .card-title {
-    @include headerHighlight(0.3em);
+    @include headerHighlight();
     font-weight: 400;
 
     top: -0.8em;
@@ -301,12 +299,6 @@ footer {
   fill: #000000;
 }
 
-@mixin highlighter {
-  background: $color-dark-semiTrans;
-  backdrop-filter: blur(5px);
-  box-shadow: $shadow-main;
-}
-
 .hero {
   position: relative;
   width: 100%;
@@ -318,34 +310,20 @@ footer {
 
   .hero-title {
     @include highlighter();
-    // background: $color-dark-semiTrans;
-    // backdrop-filter: blur(5px);
-    // box-shadow: $shadow-main;
     padding: 1em 1em 1.5em 1em;
     transform: translateY(-60%);
     position: absolute;
-
-    h1 {
-      letter-spacing: 0.15em;
-      font-size: 3em;
-    }
-
-    h2 {
-      text-transform: uppercase;
-      font-size: 1.5em;
-      line-height: 0.5em;
-      letter-spacing: 0.15em;
-    }
   }
 }
 
 .intro-text {
   font-size: 1.5em;
   padding-inline: $inline-padding;
+  margin-bottom: 1em;
 }
 
 #nav-links {
-  display: flex;
+  @include flexCenter();
   flex-direction: column;
   font-size: 2em;
   font-weight: bold;
@@ -372,25 +350,11 @@ footer {
   }
 
   hr {
-    border: 3px solid rgba(255, 255, 255, 0.5);
+    border: $hr;
     border-radius: 1em;
     backdrop-filter: blur(3px);
     width: 80%;
   }
-}
-
-h3 {
-  font-size: 3em;
-  padding-inline: $inline-padding;
-}
-
-h4 {
-  font-size: 2em;
-  color: $color-white;
-  font-weight: 200;
-  @include highlighter();
-  display: inline-block;
-  padding-inline: $inline-padding;
 }
 
 #cards-teaser {
@@ -398,13 +362,11 @@ h4 {
 }
 
 .card-teaser {
-  height: 130px;
+  @include glassMorphism();
   display: flex;
   justify-content: flex-start;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(4px);
-  box-shadow: $shadow-main;
+  height: 130px;
   border-radius: 1.5em;
   margin-block: 2em;
 
@@ -414,8 +376,6 @@ h4 {
 
   img {
     aspect-ratio: 1/1;
-    object-fit: cover;
-    min-height: 100%;
   }
 
   .card-teaser-text {
@@ -432,7 +392,7 @@ h4 {
   }
 
   a {
-    color: #000000;
+    color: $color-black;
     text-decoration: underline;
     font-size: 1.2em;
     font-weight: 300;
@@ -446,8 +406,8 @@ h4 {
   .see-all {
     display: flex;
     flex-direction: row;
-    width: 75%;
     align-items: center;
+    width: 75%;
     flex-wrap: nowrap;
 
     img {
@@ -475,16 +435,16 @@ footer {
   padding: 2em;
   height: 500px;
   background-color: $color-dark;
+  color: white;
 
   #newsletter {
     display: flex;
     flex-direction: column;
 
     h6 {
-      font-size: 1.5em;
+      font-size: 1.2em;
     }
     form {
-      // background-color: $color-white;
       display: flex;
     }
 
@@ -509,8 +469,11 @@ footer {
   }
 
   #opening-hours {
+    padding-top: 2em;
+
     display: grid;
     grid-template-columns: 2fr 1fr;
+    text-align: justify;
   }
 
   .contact-info {
