@@ -221,4 +221,32 @@ footer {
 .image {
   width: 100%;
   fill: #000000;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  margin-bottom: 5em;
+}
+.hero img {
+  width: 100%;
+}
+.hero .hero-title {
+  background: rgba(30, 71, 75, 0.6980392157);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);
+  padding: 1em 1em 1.5em 1em;
+  transform: translateY(-60%);
+  position: absolute;
+}
+.hero .hero-title h1 {
+  letter-spacing: 0.15em;
+  font-size: 3em;
+}
+.hero .hero-title h2 {
+  text-transform: uppercase;
+  font-size: 1.5em;
+  line-height: 0.5em;
+  letter-spacing: 0.15em;
 }/*# sourceMappingURL=style.css.map */

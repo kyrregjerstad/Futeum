@@ -36,6 +36,7 @@
 $color-primary: #00a66a;
 $color-secondary: #0056a6;
 $color-dark: #1e474b;
+$color-dark-semiTrans: #1e474bb2;
 $color-black: #000000;
 $color-white: #ffffff;
 
@@ -282,4 +283,42 @@ footer {
 .image {
   width: 100%;
   fill: #000000;
+}
+
+@mixin highlighter {
+  background: $color-dark-semiTrans;
+  backdrop-filter: blur(5px);
+  box-shadow: $shadow-main;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  margin-bottom: 5em;
+
+  img {
+    width: 100%;
+  }
+
+  .hero-title {
+    @include highlighter();
+    // background: $color-dark-semiTrans;
+    // backdrop-filter: blur(5px);
+    // box-shadow: $shadow-main;
+    padding: 1em 1em 1.5em 1em;
+    transform: translateY(-60%);
+    position: absolute;
+
+    h1 {
+      letter-spacing: 0.15em;
+      font-size: 3em;
+    }
+
+    h2 {
+      text-transform: uppercase;
+      font-size: 1.5em;
+      line-height: 0.5em;
+      letter-spacing: 0.15em;
+    }
+  }
 }
