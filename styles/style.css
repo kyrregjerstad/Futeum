@@ -323,6 +323,7 @@ header #hamburger-menu img {
 }
 .card-teaser img {
   aspect-ratio: 1/1;
+  min-height: 100%;
 }
 .card-teaser .card-teaser-text {
   display: flex;
