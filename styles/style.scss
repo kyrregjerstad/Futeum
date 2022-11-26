@@ -477,13 +477,21 @@ footer {
   background-color: $color-dark;
 
   #newsletter {
+    display: flex;
+    flex-direction: column;
+
+    h6 {
+      font-size: 1.5em;
+    }
     form {
-      background-color: $color-white;
+      // background-color: $color-white;
+      display: flex;
     }
 
     input {
       border: none;
       padding: 1em;
+      flex: 3;
 
       &:focus {
         outline: none;
@@ -491,19 +499,23 @@ footer {
     }
 
     button {
-      border: none;
+      border: solid white;
       background-color: $color-primary;
       padding: 0.8em;
       margin-right: 0.22em;
+      color: $color-white;
+      flex: 1;
     }
   }
 
   #opening-hours {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
   }
 
   .contact-info {
     display: flex;
+    justify-content: space-between;
+    width: 100%;
   }
 }

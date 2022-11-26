@@ -397,26 +397,38 @@ footer {
   height: 500px;
   background-color: #1e474b;
 }
+footer #newsletter {
+  display: flex;
+  flex-direction: column;
+}
+footer #newsletter h6 {
+  font-size: 1.5em;
+}
 footer #newsletter form {
-  background-color: #ffffff;
+  display: flex;
 }
 footer #newsletter input {
   border: none;
   padding: 1em;
+  flex: 3;
 }
 footer #newsletter input:focus {
   outline: none;
 }
 footer #newsletter button {
-  border: none;
+  border: solid white;
   background-color: #00a66a;
   padding: 0.8em;
   margin-right: 0.22em;
+  color: #ffffff;
+  flex: 1;
 }
 footer #opening-hours {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
 }
 footer .contact-info {
   display: flex;
+  justify-content: space-between;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
