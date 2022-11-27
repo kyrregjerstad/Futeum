@@ -241,7 +241,7 @@
               />
               <img
                 loading="lazy"
-                src="/assets/images/jpg/1024w__Cosmology.jpg"
+                src="/assets/images/jpg/1024w_Cosmology.jpg"
                 alt=""
               />
             </picture>
@@ -255,7 +255,26 @@
           </div>
           <div class="card-teaser">
             <picture class="card-teaser-image">
-              <img loading="lazy" src="/assets/images/Exhibitions.jpg" alt="" />
+              <source
+                media="(min-width: 1600px)"
+                srcset="/assets/images/1600/1600w_Evolution.webp.webp"
+                1600w
+              />
+              <source
+                media="(min-width: 1024px)"
+                srcset="/assets/images/1024/1024w_Evolution.webp"
+                1024w
+              />
+              <source
+                media="(max-width: 512px)"
+                srcset="/assets/images/512/512w_Evolution.webp"
+                512w
+              />
+              <img
+                loading="lazy"
+                src="/assets/images/jpg/1024w_Evolution.jpg"
+                alt=""
+              />
             </picture>
             <div class="card-teaser-text">
               <div>
