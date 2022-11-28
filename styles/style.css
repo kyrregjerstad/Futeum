@@ -402,6 +402,25 @@ header li {
   text-align: right;
 }
 
+.chat-bubble {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);
+  background-color: rgba(0, 166, 105, 0.4705882353);
+  width: 2em;
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  border: solid #ffffff;
+}
+
 footer {
   display: flex;
   justify-content: center;

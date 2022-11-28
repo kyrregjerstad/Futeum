@@ -40,6 +40,7 @@
 }
 
 $color-primary: #00a66a;
+$color-primary-semiTrans: #00a66978;
 $color-secondary: #0056a6;
 $color-dark: #1e474b;
 $color-dark-semiTrans: #1e474bb2;
@@ -466,6 +467,20 @@ header {
     align-items: flex-end;
     text-align: right;
   }
+}
+
+.chat-bubble {
+  @include flexCenter();
+  @include glassMorphism();
+  background-color: $color-primary-semiTrans;
+  width: 2em;
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  border: solid $color-white;
 }
 
 footer {
