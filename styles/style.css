@@ -55,8 +55,19 @@ body {
   background: linear-gradient(180deg, #00a66a 0%, #0056a6 100%);
   width: 100%;
 }
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #000000;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #1e474b;
+  border-radius: 1em;
+}
 
-a {
+body a {
   color: #ffffff;
   text-decoration: none;
 }
@@ -147,6 +158,9 @@ header #hamburger-menu img {
   align-items: center;
   padding: 0 1em;
   height: 2.5em;
+}
+header li {
+  display: inline-block;
 }
 
 .button {
@@ -338,7 +352,7 @@ header #hamburger-menu img {
   overflow: hidden;
   height: 130px;
   border-radius: 1.5em;
-  margin-block: 2em;
+  margin-block: 1em;
 }
 .card-teaser .card-teaser-image {
   width: 25%;

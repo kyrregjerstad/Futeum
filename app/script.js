@@ -69,3 +69,42 @@ timeline.to(".scroll-anim-d", {
 //   },
 //   0
 // );
+
+// gsap.from(".card-teaser", {
+//   scrollTrigger: {
+//     trigger: ".card-teaser",
+//     start: "top bottom",
+//   },
+//   ease: "slow",
+//   duration: 0.4,
+//   rotation: -2,
+//   scale: 1.2,
+//   opacity: 0,
+//   stagger: 0.25,
+// });
+
+ScrollTrigger.batch(".card-teaser", {
+  once: true,
+
+  onEnter: (batch) => {
+    gsap.from(batch, {
+      delay: 0.1,
+      opacity: 0,
+      rotation: -2,
+      scale: 1.2,
+      stagger: 0.25,
+    });
+  },
+});
+
+ScrollTrigger.batch(".card-teaser-text", {
+  once: true,
+
+  onEnter: (batch) => {
+    gsap.from(batch, {
+      delay: 0.35,
+      opacity: 0,
+      stagger: 0.2,
+    });
+  },
+});
