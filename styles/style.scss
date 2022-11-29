@@ -411,6 +411,7 @@ header {
   height: 130px;
   border-radius: 1.5em;
   margin-block: 1em;
+  opacity: 0;
 
   .card-teaser-image {
     width: 25%;
@@ -426,6 +427,7 @@ header {
     justify-content: space-between;
     padding-block: 0.5em;
     margin-inline: 0.5em;
+    opacity: 0;
   }
 
   p {

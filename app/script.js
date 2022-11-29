@@ -87,7 +87,6 @@ ScrollTrigger.batch(".card-teaser", {
   once: true,
   // paused: true,
   start: "bottom bottom",
-  markers: true,
 
   onEnter: (batch) => {
     gsap.fromTo(
@@ -122,24 +121,6 @@ ScrollTrigger.batch(".card-teaser-text", {
         opacity: 1,
         delay: 0.45,
         stagger: 0.2,
-        ease: "power1.inOut",
-      }
-    );
-  },
-});
-
-ScrollTrigger.batch(".line-break", {
-  once: true,
-
-  onEnter: (batch) => {
-    gsap.fromTo(
-      batch,
-      {
-        x: 500,
-      },
-      {
-        x: 0,
-        duration: 1,
         ease: "power1.inOut",
       }
     );

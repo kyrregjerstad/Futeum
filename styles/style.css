@@ -353,6 +353,7 @@ header li {
   height: 130px;
   border-radius: 1.5em;
   margin-block: 1em;
+  opacity: 0;
 }
 .card-teaser .card-teaser-image {
   width: 25%;
@@ -366,6 +367,7 @@ header li {
   justify-content: space-between;
   padding-block: 0.5em;
   margin-inline: 0.5em;
+  opacity: 0;
 }
 .card-teaser p {
   font-size: 1em;
