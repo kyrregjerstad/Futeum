@@ -457,6 +457,7 @@ header {
     padding-block: 0.5em;
     margin-inline: 0.5em;
     opacity: 0;
+    position: relative;
   }
 
   p {
@@ -480,12 +481,20 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 75%;
+    height: 100%;
+    // width: 100%;
     flex-wrap: nowrap;
 
     img {
-      padding-right: 2em;
+      right: 1em;
+      top: 50%;
+      width: 10px;
+      object-fit: contain;
     }
+  }
+
+  &:hover {
+    transform: scale(1.2);
   }
 }
 
