@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/Flip.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollToPlugin.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/TextPlugin.min.js"
+      defer
+    ></script>
+
+    <script src="/app/script.js" type="module"></script>
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <header>
+      <picture id="header-logo">
+        <img src="/assets/logos/futeum_emblem_9.svg" alt="" />
+      </picture>
+      <div id="navbar-right">
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Tickets</a></li>
+          </ul>
+        </nav>
+        <picture id="hamburger-menu">
+          <a href="#"> <img src="/assets/icons/icon_hamburger.svg" alt="" /></a>
+        </picture>
+    </header>
+    <main>
+      <section class="hero">
+        <picture>
+          <source
+            media="(min-width: 1600px)"
+            srcset="/assets/images/1600/1600w_hero-adults.webp"
+            1600w
+          />
+          <source
+            media="(min-width: 1024px)"
+            srcset="/assets/images/1024/1024w_hero-adults.webp"
+            1024w
+          />
+          <source
+            media="(max-width: 512px) "
+            srcset="/assets/images/512/512w_hero-adults.webp"
+            512w
+          />
+          <img src="/assets/images/jpg/1024w_hero-adults.jpg" alt="" />
+        </picture>
+        <div class="hero-title">
+          <h1>Adults</h1>
+          <h2>at <span>Futeum</span></h2>
+        </div>
+      </section>
+      <section class="intro-text">
+        <p>
+          Come join us at the Futeum where we're committed to making science accessible to all.
+        </p>
+        <p>
+          Over the course of human history, science has developed from our early understanding of fire, wind, water, and earth to exploring everything from galaxies far away to the very building blocks of life itself.
+        </p>
+      </section>
+      <div class="line-break">
+        <hr />
+      </div>
+      <article id="teachers" class="info-article">
+        <section>
+          <picture>
+            <source
+              media="(min-width: 1600px)"
+              srcset="/assets/images/1600/1600w_teachers.webp"
+              1600w
+            />
+            <source
+              media="(min-width: 1024px)"
+              srcset="/assets/images/1024/1024w_teachers.webp"
+              1024w
+            />
+            <source
+              media="(max-width: 512px) "
+              srcset="/assets/images/512/512w_teachers.webp"
+              512w
+            />
+            <img src="/assets/images/jpg/1024w_teachers.jpg" alt="" />
+          </picture>
+          <div class="section-title">
+            <h3>Teachers</h3>
+          </div>
+        </section>
+        <section>
+          <p>
+            As a community-driven museum, we want to work with schools to create places of learning and exploring. Our team are on hand to give your students guided tours of the museum, teach them in our learning laboratory, and provide great video presentations that will excite and inspire them.
+Please get in touch with us here to find out more about our facilities and to arrange a time to bring your students through for a visit.
+
+          </p>
+        </section>
+      </article>
+      <div class="line-break">
+        <hr />
+      </div>
+      <article id="researchers" class="info-article">
+        <section>
+          <picture>
+            <source
+              media="(min-width: 1600px)"
+              srcset="/assets/images/1600/1600w_Researchers.webp"
+              1600w
+            />
+            <source
+              media="(min-width: 1024px)"
+              srcset="/assets/images/1024/1024w_Researchers.webp"
+              1024w
+            />
+            <source
+              media="(max-width: 512px) "
+              srcset="/assets/images/512/512w_Researchers.webp"
+              512w
+            />
+            <img src="/assets/images/jpg/1024w_Researchers.jpg" alt="" />
+          </picture>
+          <div class="section-title">
+            <h3>Researchers</h3>
+          </div>
+        </section>
+        <section>
+          <p>
+            Are you looking to get involved with our team of researchers and academics? Our museum offers various ways for you to use our resources and contribute towards them. We have online records, laboratory space, and a working relationship with a number of universities around the country.
+          </p>
+        </section>
+      </article>
+      <div class="line-break">
+        <hr />
+      </div>
+      <button class="button">Book free tickets now</button>
+    </main>
+    <div class="chat-bubble">
+      <picture>
+        <img src="/assets/icons/icon-chat.svg" alt="" />
+      </picture>
+    </div>
+    <footer>
+      <div class="footer-wrapper">
+        <div>
+          <div id="newsletter">
+            <h6>Sign up for our weekly newsletter!</h6>
+            <form>
+              <input type="email" placeholder="email" />
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+          <section>
+            <ul id="opening-hours">
+              <li>Monday:</li>
+              <li>Closed</li>
+              <li>Tuesday:</li>
+              <li>10:00 - 16:00</li>
+              <li>Wednesday:</li>
+              <li>10:00 - 16:00</li>
+              <li>Thursday:</li>
+              <li>10:00 - 16:00</li>
+              <li>Friday:</li>
+              <li>10:00 - 19:00</li>
+              <li>Saturday:</li>
+              <li>10:00 - 16:00</li>
+              <li>Sunday:</li>
+              <li>09:00 - 13:00</li>
+            </ul>
+          </section>
+        </div>
+        <div class="contact-info">
+          <section>
+            <p><strong>Location</strong></p>
+            <p>Potsdamer Str. 58</p>
+            <p>53129</p>
+            <p>Berlin</p>
+            <p>Germany</p>
+          </section>
+          <section>
+            <p><strong>Contact</strong>:</p>
+            <p>info@futeum.com</p>
+            <p>0176 278 4485</p>
+          </section>
+        </div>
+        <section>
+          <picture>
+            <img src="" alt="" />
+          </picture>
+          <picture>
+            <img src="" alt="" />
+          </picture>
+          <picture>
+            <img src="" alt="" />
+          </picture>
+        </section>
+        <p>&copy; Futeum 2022</p>
+      </div>
+    </footer>
+  </body>
+</html>

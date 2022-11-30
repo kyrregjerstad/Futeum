@@ -61,6 +61,8 @@ $font-spot: Spotnik, sans-serif;
 
 $shadow-main: -4px 4px 6px rgba(0, 0, 0, 0.15);
 
+$tablet-breakpoint: 800px;
+
 @mixin highlighter {
   background: $color-dark-semiTrans;
   backdrop-filter: blur(5px);
@@ -129,9 +131,9 @@ ul {
 }
 
 h1 {
-  letter-spacing: 0.2em;
-  font-size: 3em;
+  font-size: 5em;
   color: $color-white;
+  letter-spacing: 0.1em;
 }
 
 h2 {
@@ -177,8 +179,9 @@ button {
 }
 
 main {
-  max-width: 800px;
+  max-width: $tablet-breakpoint;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 
 header {
@@ -198,6 +201,12 @@ header {
     padding: 0.5em;
   }
 
+  #navbar-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   #hamburger-menu img {
     @include flexCenter();
     padding: 0 1em;
@@ -205,7 +214,15 @@ header {
   }
 
   li {
-    display: inline-block;
+    font-family: $font-spot;
+    display: none;
+    padding-inline: 1em;
+  }
+
+  @media (min-width: $tablet-breakpoint) {
+    li {
+      display: inline-block;
+    }
   }
 }
 
@@ -221,6 +238,7 @@ header {
   font-size: 1.5em;
   letter-spacing: 0.06em;
   cursor: pointer;
+  margin: 10em auto;
 }
 
 .hero-container {
@@ -349,6 +367,12 @@ header {
     padding: 1em 1em 1.5em 1em;
     transform: translateY(-60%);
     position: absolute;
+
+    #landing-title {
+      letter-spacing: 0.2em;
+      font-size: 4em;
+      color: $color-white;
+    }
   }
 }
 
@@ -471,6 +495,22 @@ header {
   }
 }
 
+.info-article {
+  img {
+    width: 100%;
+  }
+
+  p {
+    padding-block: 3em;
+  }
+  .section-title {
+    @include highlighter();
+    padding: 1em;
+    transform: translateY(-60%);
+    position: absolute;
+  }
+}
+
 .chat-bubble {
   @include flexCenter();
   @include glassMorphism();
@@ -551,7 +591,7 @@ footer {
 
 @media (min-width: 1000px) {
   main {
-    max-width: 1600px;
+    max-width: 1200px;
     margin: 0 auto;
   }
   .cards-teaser {
@@ -576,5 +616,8 @@ footer {
 
   .footer-wrapper {
     max-width: 1200px;
+  }
+
+  .info-article {
   }
 }
