@@ -53,8 +53,6 @@ html {
 body {
   position: relative;
   background: linear-gradient(180deg, #00a66a 0%, #0056a6 100%);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   width: 100%;
 }
 body::-webkit-scrollbar {
@@ -521,28 +519,39 @@ footer .contact-info {
 }
 
 #login-section {
-  display: flex;
-  flex-direction: column;
   max-width: 636px;
   margin: 0 auto;
   padding-inline: 1em;
 }
-#login-section a {
+#login-section section {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);
+  background-color: rgba(255, 255, 255, 0.1529411765);
+  padding: 2em;
+  border-radius: 2em;
+  margin-top: 1.5em;
+}
+#login-section section a {
   text-decoration: underline;
   color: black;
 }
-#login-section h1,
-#login-section label {
+#login-section section h1,
+#login-section section label {
   color: #000000;
   font-weight: bold;
 }
-#login-section #login-header {
-  font-size: 3em;
+#login-section section #login-header {
+  font-size: 2em;
+  margin-top: 0;
 }
-#login-section label {
+#login-section section label {
   margin-block: 1.5em 0.3em;
 }
-#login-section input {
+#login-section section input {
   height: 3rem;
   border-radius: 1em;
   padding: 1em;
@@ -551,16 +560,24 @@ footer .contact-info {
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
   box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);
+  box-shadow: none;
+  transition: box-shadow 300ms;
+}
+#login-section section input:focus, #login-section section input:hover {
+  box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);
+  outline: none;
 }
 #login-section button {
   width: 100%;
   margin-block: 2em;
   border: solid 2px rgba(255, 255, 255, 0.5176470588);
+  box-shadow: none;
 }
 #login-section button:nth-of-type(even) {
   margin-top: 20%;
   background: #1e474b;
   border: none;
+  box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);
 }
 
 @media (min-width: 1000px) {
@@ -590,4 +607,14 @@ footer .contact-info {
   #login-header {
     font-size: 5em;
   }
+}
+.chat-bubble::after {
+  width: 350px;
+  height: 550px;
+  position: absolute;
+  background-color: #ffffff;
+  border: solid black 2px;
+  border-radius: 1em;
+  right: 0;
+  bottom: 0;
 }/*# sourceMappingURL=style.css.map */

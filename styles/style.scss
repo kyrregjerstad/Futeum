@@ -106,8 +106,8 @@ html {
 body {
   position: relative;
   background: $gradient-primary;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  // background-repeat: no-repeat;
+  // background-attachment: fixed;
   width: 100%;
 
   &::-webkit-scrollbar {
@@ -601,51 +601,67 @@ footer {
 }
 
 #login-section {
-  display: flex;
-  flex-direction: column;
-  // justify-content: center;
-  // align-items: center;
   max-width: 636px;
   margin: 0 auto;
   padding-inline: 1em;
-
-  a {
-    text-decoration: underline;
-    color: black;
-  }
-
-  h1,
-  label {
-    color: #000000;
-    font-weight: bold;
-  }
-
-  #login-header {
-    font-size: 3em;
-  }
-
-  label {
-    margin-block: 1.5em 0.3em;
-  }
-
-  input {
-    height: 3rem;
-    border-radius: 1em;
-    padding: 1em;
-    border: solid 1px $color-white-semiTrans;
+  section {
+    display: flex;
+    flex-direction: column;
     @include glassMorphism();
+    background-color: #ffffff27;
+    padding: 2em;
+    border-radius: 2em;
+    margin-top: 1.5em;
+
+    a {
+      text-decoration: underline;
+      color: black;
+    }
+
+    h1,
+    label {
+      color: #000000;
+      font-weight: bold;
+    }
+
+    #login-header {
+      font-size: 2em;
+      margin-top: 0;
+    }
+
+    label {
+      margin-block: 1.5em 0.3em;
+    }
+
+    input {
+      height: 3rem;
+      border-radius: 1em;
+      padding: 1em;
+      border: solid 1px $color-white-semiTrans;
+      @include glassMorphism();
+      box-shadow: none;
+      transition: box-shadow 300ms;
+
+      &:focus,
+      &:hover {
+        box-shadow: $shadow-main;
+        outline: none;
+      }
+    }
   }
 
   button {
     width: 100%;
     margin-block: 2em;
     border: solid 2px $color-white-semiTrans;
+    box-shadow: none;
   }
 
   button:nth-of-type(even) {
     margin-top: 20%;
     background: $color-dark;
     border: none;
+    box-shadow: $shadow-main;
   }
 }
 
@@ -681,4 +697,16 @@ footer {
   #login-header {
     font-size: 5em;
   }
+}
+
+.chat-bubble::after {
+  // content: "";
+  width: 350px;
+  height: 550px;
+  position: absolute;
+  background-color: $color-white;
+  border: solid black 2px;
+  border-radius: 1em;
+  right: 0;
+  bottom: 0;
 }
