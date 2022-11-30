@@ -46,6 +46,7 @@ $color-dark: #1e474b;
 $color-dark-semiTrans: #1e474bb2;
 $color-black: #000000;
 $color-white: #ffffff;
+$color-white-semiTrans: #ffffff84;
 $inline-padding: 10px;
 
 $hr: 3px solid rgba(255, 255, 255, 0.5);
@@ -55,6 +56,8 @@ $gradient-primary: linear-gradient(
   $color-primary 0%,
   $color-secondary 100%
 );
+
+$gradinet-secondary: linear-gradient(191.54deg, #00a69c 5.32%, #00a66a 92.1%);
 
 $font-main: Roboto, sans-serif;
 $font-spot: Spotnik, sans-serif;
@@ -103,6 +106,8 @@ html {
 body {
   position: relative;
   background: $gradient-primary;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   width: 100%;
 
   &::-webkit-scrollbar {
@@ -191,7 +196,7 @@ header {
   z-index: 999;
   justify-content: space-between;
   width: 100%;
-  height: 5em;
+  height: 4em;
   box-shadow: $shadow-main;
   background-color: $color-black;
 
@@ -210,7 +215,7 @@ header {
   #hamburger-menu img {
     @include flexCenter();
     padding: 0 1em;
-    height: 2.5em;
+    height: 2em;
   }
 
   li {
@@ -589,6 +594,61 @@ footer {
   }
 }
 
+#login-page {
+  background: $gradinet-secondary;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#login-section {
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+  max-width: 636px;
+  margin: 0 auto;
+  padding-inline: 1em;
+
+  a {
+    text-decoration: underline;
+    color: black;
+  }
+
+  h1,
+  label {
+    color: #000000;
+    font-weight: bold;
+  }
+
+  #login-header {
+    font-size: 3em;
+  }
+
+  label {
+    margin-block: 1.5em 0.3em;
+  }
+
+  input {
+    height: 3rem;
+    border-radius: 1em;
+    padding: 1em;
+    border: solid 1px $color-white-semiTrans;
+    @include glassMorphism();
+  }
+
+  button {
+    width: 100%;
+    margin-block: 2em;
+    border: solid 2px $color-white-semiTrans;
+  }
+
+  button:nth-of-type(even) {
+    margin-top: 20%;
+    background: $color-dark;
+    border: none;
+  }
+}
+
 @media (min-width: 1000px) {
   main {
     max-width: 1200px;
@@ -618,6 +678,7 @@ footer {
     max-width: 1200px;
   }
 
-  .info-article {
+  #login-header {
+    font-size: 5em;
   }
 }

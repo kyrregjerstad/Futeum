@@ -53,6 +53,8 @@ html {
 body {
   position: relative;
   background: linear-gradient(180deg, #00a66a 0%, #0056a6 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   width: 100%;
 }
 body::-webkit-scrollbar {
@@ -144,7 +146,7 @@ header {
   z-index: 999;
   justify-content: space-between;
   width: 100%;
-  height: 5em;
+  height: 4em;
   box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);
   background-color: #000000;
 }
@@ -163,7 +165,7 @@ header #hamburger-menu img {
   justify-content: center;
   align-items: center;
   padding: 0 1em;
-  height: 2.5em;
+  height: 2em;
 }
 header li {
   font-family: Spotnik, sans-serif;
@@ -512,6 +514,55 @@ footer .contact-info {
   width: 100%;
 }
 
+#login-page {
+  background: linear-gradient(191.54deg, #00a69c 5.32%, #00a66a 92.1%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#login-section {
+  display: flex;
+  flex-direction: column;
+  max-width: 636px;
+  margin: 0 auto;
+  padding-inline: 1em;
+}
+#login-section a {
+  text-decoration: underline;
+  color: black;
+}
+#login-section h1,
+#login-section label {
+  color: #000000;
+  font-weight: bold;
+}
+#login-section #login-header {
+  font-size: 3em;
+}
+#login-section label {
+  margin-block: 1.5em 0.3em;
+}
+#login-section input {
+  height: 3rem;
+  border-radius: 1em;
+  padding: 1em;
+  border: solid 1px rgba(255, 255, 255, 0.5176470588);
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);
+}
+#login-section button {
+  width: 100%;
+  margin-block: 2em;
+  border: solid 2px rgba(255, 255, 255, 0.5176470588);
+}
+#login-section button:nth-of-type(even) {
+  margin-top: 20%;
+  background: #1e474b;
+  border: none;
+}
+
 @media (min-width: 1000px) {
   main {
     max-width: 1200px;
@@ -535,5 +586,8 @@ footer .contact-info {
   }
   .footer-wrapper {
     max-width: 1200px;
+  }
+  #login-header {
+    font-size: 5em;
   }
 }/*# sourceMappingURL=style.css.map */

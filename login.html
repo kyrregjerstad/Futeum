@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/assets/logos/futeum_emblem_11.svg">
+
     <title>Document</title>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
@@ -29,7 +31,7 @@
     <script src="/app/script.js" type="module"></script>
     <link rel="stylesheet" href="/styles/style.css" />
   </head>
-  <body>
+  <body id="login-page">
     <header>
       <picture id="header-logo">
         <img src="/assets/logos/futeum_emblem_9.svg" alt="" />
@@ -47,14 +49,17 @@
           <a href="#"> <img src="/assets/icons/icon_hamburger.svg" alt="" /></a>
         </picture>
     </header>
-    <main>
-      <form action="">
-        <input type="email">
-        <input type="password">
-        <button type="submit">Login</button>
+    <main >
+      <form id="login-section" action="">
+        <label for="login-section"><h1 id="login-header">Log in</h1></label>
+        <label for="email">Email</label>
+        <input id="email" type="email" >
+        <label for="password">Password</label>
+        <input id="password" type="password" >
+        <button type="submit" class="button">Login</button>
         <p>Don't already have an account?</p>
         <p>Click here to <a href="#">register</a></p>
-        <button type="submit">Continue as guest</button>
+        <button type="submit" class="button">Continue as guest</button>
       </form>
     </main>
     <div class="chat-bubble">
@@ -62,62 +67,5 @@
         <img src="/assets/icons/icon-chat.svg" alt="" />
       </picture>
     </div>
-    <footer>
-      <div class="footer-wrapper">
-        <div>
-          <div id="newsletter">
-            <h6>Sign up for our weekly newsletter!</h6>
-            <form>
-              <input type="email" placeholder="email" />
-              <button type="submit">Subscribe</button>
-            </form>
-          </div>
-          <section>
-            <ul id="opening-hours">
-              <li>Monday:</li>
-              <li>Closed</li>
-              <li>Tuesday:</li>
-              <li>10:00 - 16:00</li>
-              <li>Wednesday:</li>
-              <li>10:00 - 16:00</li>
-              <li>Thursday:</li>
-              <li>10:00 - 16:00</li>
-              <li>Friday:</li>
-              <li>10:00 - 19:00</li>
-              <li>Saturday:</li>
-              <li>10:00 - 16:00</li>
-              <li>Sunday:</li>
-              <li>09:00 - 13:00</li>
-            </ul>
-          </section>
-        </div>
-        <div class="contact-info">
-          <section>
-            <p><strong>Location</strong></p>
-            <p>Potsdamer Str. 58</p>
-            <p>53129</p>
-            <p>Berlin</p>
-            <p>Germany</p>
-          </section>
-          <section>
-            <p><strong>Contact</strong>:</p>
-            <p>info@futeum.com</p>
-            <p>0176 278 4485</p>
-          </section>
-        </div>
-        <section>
-          <picture>
-            <img src="" alt="" />
-          </picture>
-          <picture>
-            <img src="" alt="" />
-          </picture>
-          <picture>
-            <img src="" alt="" />
-          </picture>
-        </section>
-        <p>&copy; Futeum 2022</p>
-      </div>
-    </footer>
   </body>
 </html>
