@@ -399,6 +399,7 @@ header li {
   font-size: 1.2em;
   font-weight: 300;
   text-decoration-thickness: 0.04em;
+  cursor: pointer;
 }
 .card-teaser a h5 {
   font-size: 1em;
