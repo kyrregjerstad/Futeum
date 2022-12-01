@@ -200,10 +200,10 @@ header {
   box-shadow: $shadow-main;
   background-color: $color-black;
 
-  #header-logo {
+  .header-logo {
     display: flex;
     height: 100%;
-    padding: 0.5em;
+    padding: 0.25em;
   }
 
   #navbar-right {
@@ -719,4 +719,115 @@ footer {
   border-radius: 1em;
   right: 0;
   bottom: 0;
+}
+
+.calendar-headings {
+  margin: 1em;
+  font-size: 1.5em;
+  font-family: $font-main;
+  letter-spacing: 0;
+  padding-inline: 0;
+}
+
+.cal-container {
+  @include flexCenter();
+  margin: 0 auto;
+
+  max-width: 768px;
+}
+
+.calendar {
+  @include glassMorphism();
+  margin-inline: 1em;
+  width: 100%;
+  max-width: 768px;
+  box-shadow: $shadow-main;
+  border-radius: 2em;
+}
+
+.month {
+  @include flexCenter();
+  justify-content: space-between;
+  width: 100%;
+  background-color: $color-primary;
+  border-radius: 2em 2em 0 0;
+  padding: 0 1em;
+  text-align: center;
+  color: #000000;
+
+  .date {
+    padding: 1em;
+  }
+
+  h2 {
+    color: #000000;
+    font-size: 2em;
+    text-transform: uppercase;
+    margin-bottom: 0.5em;
+  }
+
+  p {
+    font-size: 1.6em;
+  }
+}
+
+.weekdays,
+.days-of-month {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  div {
+    padding: 1em 0;
+  }
+}
+
+// .weekdays,
+// .days-of-month {
+//   width: 100%;
+//   display: grid;
+//   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+//   justify-content: center;
+//   align-items: center;
+//   text-align: center;
+
+//   div {
+//     padding: 2em;
+//   }
+// }
+
+.prev-month-date,
+.next-month-date {
+  opacity: 0.5;
+}
+
+.today {
+  background-color: lightgrey;
+  border: solid grey 1px;
+}
+
+.days-of-month div:hover:not(today) {
+  background-color: #00a66a;
+  cursor: pointer;
+}
+
+.timeslots {
+  border-radius: 1em;
+  @include glassMorphism();
+  display: flex;
+  margin-inline: 1em;
+  font-size: 1.2em;
+
+  li {
+    display: inline-block;
+    padding: 0.5em;
+    width: 100%;
+  }
+
+  li:nth-child(even) {
+    background-color: #00000017;
+  }
 }
