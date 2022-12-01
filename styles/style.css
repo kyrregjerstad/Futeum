@@ -640,6 +640,7 @@ footer .contact-info {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   margin: 0 auto;
   max-width: 768px;
 }
@@ -695,19 +696,38 @@ footer .contact-info {
   padding: 1em 0;
 }
 
+.day:nth-child(7n-6),
 .prev-month-date,
 .next-month-date {
-  opacity: 0.5;
+  opacity: 0.2;
+}
+.day:nth-child(7n-6):hover,
+.prev-month-date:hover,
+.next-month-date:hover {
+  pointer-events: none;
+  background-color: unset;
+  transition: unset;
+  border-radius: 0.5em;
+  outline: none;
 }
 
 .today {
-  background-color: lightgrey;
+  background-color: rgba(211, 211, 211, 0.526);
   border: solid grey 1px;
+  border-radius: 0.5em;
 }
 
-.days-of-month div:hover:not(today) {
+.days-of-month div:hover {
   background-color: #00a66a;
+  transition: all 350ms;
+  border-radius: 0.5em;
+  outline: solid grey 1px;
   cursor: pointer;
+}
+
+.timeslots-container {
+  max-width: 768px;
+  margin: 0 auto;
 }
 
 .timeslots {
@@ -716,8 +736,6 @@ footer .contact-info {
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
   box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);
-  display: flex;
-  margin-inline: 1em;
   font-size: 1.2em;
 }
 .timeslots li {

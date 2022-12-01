@@ -56,7 +56,7 @@ const renderCal = () => {
     ) {
       days += `<div class="today">${index}</div>`;
     } else {
-      days += `<div>${index}</div>`;
+      days += `<div class="day">${index}</div>`;
     }
   }
 
@@ -65,6 +65,8 @@ const renderCal = () => {
   }
 
   daysOfMonth.innerHTML = days;
+
+  console.log(date.getMonth);
 };
 
 document.querySelector(".prev-month-arrow").addEventListener("click", () => {
@@ -78,3 +80,12 @@ document.querySelector(".next-month-arrow").addEventListener("click", () => {
 });
 
 renderCal();
+
+let selectedDate = document.querySelector(".selected-date");
+
+document.querySelectorAll(".day").forEach((day) => {
+  day.addEventListener("click", (e) => {
+    console.log(e.currentTarget.innerText);
+    selectedDate.innerHTML = e.currentTarget.innerText;
+  });
+});

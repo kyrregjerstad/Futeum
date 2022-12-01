@@ -731,6 +731,7 @@ footer {
 
 .cal-container {
   @include flexCenter();
+  flex-direction: column;
   margin: 0 auto;
 
   max-width: 768px;
@@ -785,40 +786,42 @@ footer {
   }
 }
 
-// .weekdays,
-// .days-of-month {
-//   width: 100%;
-//   display: grid;
-//   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-//   justify-content: center;
-//   align-items: center;
-//   text-align: center;
-
-//   div {
-//     padding: 2em;
-//   }
-// }
-
+.day:nth-child(7n-6),
 .prev-month-date,
 .next-month-date {
-  opacity: 0.5;
+  opacity: 0.2;
+
+  &:hover {
+    pointer-events: none;
+    background-color: unset;
+    transition: unset;
+    border-radius: 0.5em;
+    outline: none;
+  }
 }
 
 .today {
-  background-color: lightgrey;
+  background-color: rgba(211, 211, 211, 0.526);
   border: solid grey 1px;
+  border-radius: 0.5em;
 }
 
-.days-of-month div:hover:not(today) {
+.days-of-month div:hover {
   background-color: #00a66a;
+  transition: all 350ms;
+  border-radius: 0.5em;
+  outline: solid grey 1px;
   cursor: pointer;
+}
+
+.timeslots-container {
+  max-width: 768px;
+  margin: 0 auto;
 }
 
 .timeslots {
   border-radius: 1em;
   @include glassMorphism();
-  display: flex;
-  margin-inline: 1em;
   font-size: 1.2em;
 
   li {
