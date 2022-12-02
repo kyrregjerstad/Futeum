@@ -325,6 +325,7 @@ header li {
   font-size: 2em;
   font-weight: bold;
   letter-spacing: 0.05em;
+  cursor: pointer;
 }
 #nav-links li {
   background: rgba(30, 71, 75, 0.6980392157);
@@ -338,6 +339,7 @@ header li {
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
   box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(45deg, rgba(255, 198, 0, 0.4999540441) 0%, rgba(0, 187, 255, 0.5028952206) 100%);
   border-radius: 1em 0em 1em 0em;
   text-align: center;
   margin-block: 0.2em;
@@ -771,4 +773,20 @@ footer .contact-info {
 }
 .timeslots li:nth-child(even) {
   background-color: rgba(0, 0, 0, 0.0901960784);
+}
+
+details summary {
+  cursor: pointer;
+}
+
+details summary > * {
+  display: inline;
+}
+
+summary {
+  font-size: 1.5em;
+}
+
+.faq-section {
+  padding: 0.5em;
 }/*# sourceMappingURL=style.css.map */
