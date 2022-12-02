@@ -1,5 +1,20 @@
 const date = new Date();
 
+const months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
 const renderCal = () => {
   date.setDate(1);
 
@@ -23,21 +38,6 @@ const renderCal = () => {
     new Date(date.getFullYear(), date.getMonth() + 1, 0).getDay() - 1;
 
   const nextDays = 7 - lastDayIndex - 1;
-
-  const months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
 
   document.querySelector(".date h2").innerHTML = months[date.getMonth()];
 
@@ -65,8 +65,6 @@ const renderCal = () => {
   }
 
   daysOfMonth.innerHTML = days;
-
-  console.log(date.getMonth);
 };
 
 document.querySelector(".prev-month-arrow").addEventListener("click", () => {
@@ -85,7 +83,20 @@ let selectedDate = document.querySelector(".selected-date");
 
 document.querySelectorAll(".day").forEach((day) => {
   day.addEventListener("click", (e) => {
-    console.log(e.currentTarget.innerText);
-    selectedDate.innerHTML = e.currentTarget.innerText;
+    let calDate = e.currentTarget.innerText;
+    let ending = "";
+    if (calDate == 1) {
+      ending = "st";
+    } else if (calDate == 2) {
+      ending = "nd";
+    } else if (calDate == 3) {
+      ending = "rd";
+    } else {
+      ending = "th";
+    }
+
+    selectedDate.innerHTML = `
+    ${calDate}${ending} of ${months[date.getMonth()]}
+    `;
   });
 });

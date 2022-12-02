@@ -393,20 +393,61 @@ header {
 
 #nav-links {
   @include flexCenter();
-  flex-direction: column;
+  justify-content: space-around;
   font-size: 2em;
   font-weight: bold;
   letter-spacing: 0.05em;
 
   li {
     @include highlighter();
-    align-self: flex-end;
+    @include flexCenter();
+    @include glassMorphism();
+    border-radius: 1em 0em 1em 0em;
+    text-align: center;
     margin-block: 0.2em;
-    padding-inline: $inline-padding;
+    padding: 2em;
+    width: 30%;
     text-decoration: underline;
     text-decoration-thickness: 0.05em;
+    transition: all 350ms cubic-bezier(0.71, -0.01, 0.35, 1);
+
+    &:hover {
+      transform: scale(1.08);
+      border-radius: 0em 1em 0em 1em;
+    }
+  }
+
+  li:nth-child(2) {
+    border-radius: 0em 0em 1em 1em;
+
+    &:hover {
+      border-radius: 1em 1em 0em 0em;
+    }
+  }
+  li:nth-child(3) {
+    border-radius: 0em 1em 0em 1em;
+
+    &:hover {
+      border-radius: 1em 0em 1em 0em;
+    }
   }
 }
+// #nav-links {
+//   @include flexCenter();
+//   flex-direction: column;
+//   font-size: 2em;
+//   font-weight: bold;
+//   letter-spacing: 0.05em;
+
+//   li {
+//     @include highlighter();
+//     align-self: flex-end;
+//     margin-block: 0.2em;
+//     padding-inline: $inline-padding;
+//     text-decoration: underline;
+//     text-decoration-thickness: 0.05em;
+//   }
+// }
 
 .line-break {
   display: flex;
