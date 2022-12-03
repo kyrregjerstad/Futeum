@@ -106,9 +106,7 @@ html {
 body {
   position: relative;
   background: $gradient-primary;
-  // background-repeat: no-repeat;
-  // background-attachment: fixed;
-  width: 100%;
+  // width: 100%;
 
   &::-webkit-scrollbar {
     width: 10px;
@@ -403,7 +401,7 @@ header {
   letter-spacing: 0.05em;
   cursor: pointer;
 
-  li {
+  a {
     @include highlighter();
     @include flexCenter();
     @include glassMorphism();
@@ -413,8 +411,23 @@ header {
     padding: 2em;
     width: 30%;
     text-decoration: underline;
+    font-size: clamp(0.3em, 4vw, 1em);
     text-decoration-thickness: 0.05em;
     transition: all 350ms cubic-bezier(0.71, -0.01, 0.35, 1);
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      z-index: -1;
+      filter: blur(2px);
+      opacity: 0.05;
+      transition: all 350ms cubic-bezier(0.71, -0.01, 0.35, 1);
+
+      &:hover {
+        opacity: 1;
+        filter: blur(1px);
+      }
+    }
 
     &:hover {
       transform: scale(1.08);
@@ -422,14 +435,14 @@ header {
     }
   }
 
-  li:nth-child(2) {
+  a:nth-child(2) {
     border-radius: 0em 0em 1em 1em;
 
     &:hover {
       border-radius: 1em 1em 0em 0em;
     }
   }
-  li:nth-child(3) {
+  a:nth-child(3) {
     border-radius: 0em 1em 0em 1em;
 
     &:hover {
