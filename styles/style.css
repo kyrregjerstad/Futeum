@@ -666,6 +666,7 @@ footer .contact-info {
   font-size: 1.5em;
   font-family: Roboto, sans-serif;
   letter-spacing: 0;
+  margin: 1em 0;
 }
 
 .cal-container {
@@ -860,6 +861,47 @@ footer .contact-info {
   max-width: 360px;
   margin: 0 auto;
   display: block;
+}
+
+#contact {
+  margin: 2em auto;
+  width: 640px;
+  padding: 2em;
+  border-radius: 2em;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);
+}
+#contact form {
+  display: flex;
+  flex-direction: column;
+}
+#contact form input,
+#contact form textarea {
+  padding: 1em;
+  margin-bottom: 1em;
+  border-radius: 1em;
+  outline: none;
+  border: none;
+}
+#contact form input:active, #contact form input:focus, #contact form input:valid,
+#contact form textarea:active,
+#contact form textarea:focus,
+#contact form textarea:valid {
+  outline: solid 1px #00a66a;
+  border: none;
+}
+#contact form input:required:invalid,
+#contact form textarea:required:invalid {
+  outline: solid 1px red;
+  border: none;
+}
+#contact form #formMessage {
+  height: 15em;
+}
+#contact form button {
+  box-shadow: none;
 }
 
 details summary {

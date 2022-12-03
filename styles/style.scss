@@ -774,6 +774,7 @@ footer {
   font-size: 1.5em;
   font-family: $font-main;
   letter-spacing: 0;
+  margin: 1em 0;
   // padding: 2em 1em;
 }
 
@@ -964,6 +965,48 @@ footer {
     max-width: 360px;
     margin: 0 auto;
     display: block;
+  }
+}
+
+#contact {
+  margin: 2em auto;
+  width: 640px;
+  padding: 2em;
+  border-radius: 2em;
+  @include glassMorphism();
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    input,
+    textarea {
+      padding: 1em;
+      margin-bottom: 1em;
+      border-radius: 1em;
+      outline: none;
+      border: none;
+
+      &:active,
+      &:focus,
+      &:valid {
+        outline: solid 1px $color-primary;
+        border: none;
+      }
+
+      &:required:invalid {
+        outline: solid 1px red;
+        border: none;
+      }
+    }
+
+    #formMessage {
+      height: 15em;
+    }
+
+    button {
+      box-shadow: none;
+    }
   }
 }
 
