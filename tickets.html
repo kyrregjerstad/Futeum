@@ -75,52 +75,56 @@
         </section>
         <button type="submit" class="button">Continue as guest</button>
       </form> -->
-      <div class="cal-container">
-        <h1 class="calendar-headings">
-          Select a day to see available timeslots:
-        </h1>
-        <div class="calendar">
-          <div class="month">
-            <img
-              class="prev-month-arrow"
-              src="/assets/icons/icon-arrow-left.svg"
-              alt=""
-            />
-            <div class="date">
-              <h2></h2>
-              <p></p>
+      <form action="/checkout.html">
+        <div class="cal-container">
+          <h1 class="calendar-headings">
+            Select a day to see available timeslots:
+          </h1>
+          <div class="calendar">
+            <div class="month">
+              <img
+                class="prev-month-arrow"
+                src="/assets/icons/icon-arrow-left.svg"
+                alt=""
+              />
+              <div class="date">
+                <h2></h2>
+                <p></p>
+              </div>
+              <img
+                class="next-month-arrow"
+                src="/assets/icons/icon-arrow-right.svg"
+                alt=""
+              />
             </div>
-            <img
-              class="next-month-arrow"
-              src="/assets/icons/icon-arrow-right.svg"
-              alt=""
-            />
+            <div class="weekdays">
+              <div>Mon</div>
+              <div>Tue</div>
+              <div>Wed</div>
+              <div>Thu</div>
+              <div>Fri</div>
+              <div>Sat</div>
+              <div>Sun</div>
+            </div>
+            <div class="days-of-month"></div>
           </div>
-          <div class="weekdays">
-            <div>Mon</div>
-            <div>Tue</div>
-            <div>Wed</div>
-            <div>Thu</div>
-            <div>Fri</div>
-            <div>Sat</div>
-            <div>Sun</div>
+        </div>
+        <div class="timeslots-container">
+          <h3 class="calendar-headings selected-date">Please select date</h3>
+          <h3 class="calendar-headings">Available timeslots:</h3>
+          <div class="timeslots hidden">
+            <ul>
+              <li class="available-time">09:00 - 12:00</li>
+              <li class="available-time">12:00 - 15:00</li>
+              <li class="available-time">15:00 - 18:00</li>
+              <li class="available-time">18:00 - 21:00</li>
+            </ul>
           </div>
-          <div class="days-of-month"></div>
+          <h3 class="calendar-headings selected-date-and-time"></h3>
         </div>
-        <div class="selected-date"></div>
-      </div>
-      <div class="timeslots-container">
-        <h3 class="calendar-headings">Available timeslots:</h3>
-        <div class="timeslots">
-          <ul>
-            <li>09:00 - 12:00</li>
-            <li>12:00 - 15:00 - <em>lmtd. space available</em></li>
-            <li>15:00 - 18:00</li>
-            <li>18:00 - 21:00</li>
-          </ul>
-        </div>
-      </div>
-      <button type="submit" class="button">Continue</button>
+
+        <button type="submit" class="button hidden">Continue</button>
+      </form>
     </main>
     <div class="chat-bubble">
       <picture>

@@ -134,6 +134,10 @@ main {
   overflow-x: hidden;
 }
 
+.hidden {
+  opacity: 0;
+}
+
 header {
   display: flex;
   justify-content: center;
@@ -190,7 +194,7 @@ header li {
   font-size: 1.5em;
   letter-spacing: 0.06em;
   cursor: pointer;
-  margin: 10em auto;
+  margin: 1em auto;
 }
 
 .hero-container {
@@ -339,7 +343,6 @@ header li {
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
   box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);
-  background: linear-gradient(45deg, rgba(255, 198, 0, 0.4999540441) 0%, rgba(0, 187, 255, 0.5028952206) 100%);
   border-radius: 1em 0em 1em 0em;
   text-align: center;
   margin-block: 0.2em;
@@ -657,7 +660,6 @@ footer .contact-info {
 }
 
 .calendar-headings {
-  margin: 1em;
   font-size: 1.5em;
   font-family: Roboto, sans-serif;
   letter-spacing: 0;
@@ -745,14 +747,6 @@ footer .contact-info {
   border-radius: 0.5em;
 }
 
-.days-of-month div:hover {
-  background-color: #00a66a;
-  transition: all 350ms;
-  border-radius: 0.5em;
-  outline: solid grey 1px;
-  cursor: pointer;
-}
-
 .timeslots-container {
   max-width: 768px;
   margin: 0 auto;
@@ -770,9 +764,21 @@ footer .contact-info {
   display: inline-block;
   padding: 0.5em;
   width: 100%;
+  cursor: pointer;
 }
 .timeslots li:nth-child(even) {
   background-color: rgba(0, 0, 0, 0.0901960784);
+}
+
+.days-of-month div:hover,
+.active-date,
+.timeslots li:hover,
+.active-time {
+  background-color: #00a66a !important;
+  transition: all 350ms;
+  border-radius: 0.5em;
+  outline: solid grey 1px;
+  cursor: pointer;
 }
 
 details summary {

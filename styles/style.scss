@@ -189,6 +189,10 @@ main {
   overflow-x: hidden;
 }
 
+.hidden {
+  opacity: 0;
+}
+
 header {
   @include flexCenter();
   position: sticky;
@@ -243,7 +247,7 @@ header {
   font-size: 1.5em;
   letter-spacing: 0.06em;
   cursor: pointer;
-  margin: 10em auto;
+  margin: 1em auto;
 }
 
 .hero-container {
@@ -403,11 +407,6 @@ header {
     @include highlighter();
     @include flexCenter();
     @include glassMorphism();
-    background: linear-gradient(
-      45deg,
-      rgba(255, 198, 0, 0.4999540441176471) 0%,
-      rgba(0, 187, 255, 0.5028952205882353) 100%
-    );
     border-radius: 1em 0em 1em 0em;
     text-align: center;
     margin-block: 0.2em;
@@ -769,7 +768,6 @@ footer {
 }
 
 .calendar-headings {
-  margin: 1em;
   font-size: 1.5em;
   font-family: $font-main;
   letter-spacing: 0;
@@ -853,14 +851,6 @@ footer {
   border-radius: 0.5em;
 }
 
-.days-of-month div:hover {
-  background-color: #00a66a;
-  transition: all 350ms;
-  border-radius: 0.5em;
-  outline: solid grey 1px;
-  cursor: pointer;
-}
-
 .timeslots-container {
   max-width: 768px;
   margin: 0 auto;
@@ -875,11 +865,23 @@ footer {
     display: inline-block;
     padding: 0.5em;
     width: 100%;
+    cursor: pointer;
   }
 
   li:nth-child(even) {
     background-color: #00000017;
   }
+}
+
+.days-of-month div:hover,
+.active-date,
+.timeslots li:hover,
+.active-time {
+  background-color: $color-primary !important;
+  transition: all 350ms;
+  border-radius: 0.5em;
+  outline: solid grey 1px;
+  cursor: pointer;
 }
 
 details summary {
