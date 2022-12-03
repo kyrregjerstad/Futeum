@@ -552,7 +552,9 @@ footer .contact-info {
   width: 100%;
 }
 
-#login-page {
+#login-page,
+#tickets-page,
+#checkout-page {
   background: linear-gradient(191.54deg, #00a69c 5.32%, #00a66a 92.1%);
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -779,6 +781,74 @@ footer .contact-info {
   border-radius: 0.5em;
   outline: solid grey 1px;
   cursor: pointer;
+}
+
+.tickets {
+  max-width: 650px;
+  margin: 0 auto;
+}
+.tickets h1 {
+  font-size: 2em;
+  margin: 0.5em;
+  text-align: center;
+}
+
+.payment-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.2862745098);
+  border-radius: 2em;
+  padding: 1em 2em;
+  margin: 1em;
+}
+.payment-card .card-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.payment-card .card-title img {
+  padding-left: 0.5em;
+}
+.payment-card .ticket-buttons {
+  display: flex;
+  align-items: center;
+}
+.payment-card .ticket-buttons .number {
+  margin-inline: 1em;
+}
+.payment-card .ticket-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00a66a;
+  border: solid 1px #ffffff;
+  height: 5em;
+  width: 5em;
+  border-radius: 50%;
+}
+
+.complete {
+  flex-direction: column;
+}
+.complete .payment-card-text {
+  width: 100%;
+}
+.complete .payment-card-text div {
+  display: flex;
+  justify-content: space-between;
+}
+.complete button {
+  box-shadow: none;
+}
+.complete hr {
+  border-bottom: solid #000000;
+  margin-block: 0.5em;
 }
 
 details summary {

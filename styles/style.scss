@@ -650,7 +650,9 @@ footer {
   }
 }
 
-#login-page {
+#login-page,
+#tickets-page,
+#checkout-page {
   background: $gradinet-secondary;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -882,6 +884,73 @@ footer {
   border-radius: 0.5em;
   outline: solid grey 1px;
   cursor: pointer;
+}
+
+.tickets {
+  max-width: 650px;
+  margin: 0 auto;
+
+  h1 {
+    font-size: 2em;
+    margin: 0.5em;
+    text-align: center;
+  }
+}
+
+.payment-card {
+  @include flexCenter();
+  @include glassMorphism();
+  justify-content: space-between;
+  background-color: #ffffff49;
+  border-radius: 2em;
+  padding: 1em 2em;
+  margin: 1em;
+
+  .card-title {
+    @include flexCenter();
+    img {
+      padding-left: 0.5em;
+    }
+  }
+
+  .ticket-buttons {
+    display: flex;
+    align-items: center;
+
+    .number {
+      margin-inline: 1em;
+    }
+  }
+
+  .ticket-button {
+    @include flexCenter();
+    background-color: $color-primary;
+    border: solid 1px #ffffff;
+    height: 5em;
+    width: 5em;
+    border-radius: 50%;
+  }
+}
+.complete {
+  flex-direction: column;
+
+  .payment-card-text {
+    width: 100%;
+  }
+
+  .payment-card-text div {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  button {
+    box-shadow: none;
+  }
+
+  hr {
+    border-bottom: solid #000000;
+    margin-block: 0.5em;
+  }
 }
 
 details summary {

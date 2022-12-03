@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="Futeum" />
+    <meta
+      name="description"
+      content="At Futeum you can experience countless experiment stations, and visitors can experience natural phenomena first-hand and with all of their senses. "
+    />
+    <meta
+      name="keywords"
+      content="Science, Museum, Family, Activity, Community"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="English" />
+    <link rel="shortcut icon" href="/assets/logos/futeum_emblem_11.svg" />
+    <title>Futeum | Checkout</title>
+    <script src="/app/checkout.js" defer></script>
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body id="checkout-page">
+    <header>
+      <a href="/index.html" class="header-logo">
+        <picture class="header-logo">
+          <img src="/assets/logos/futeum_emblem_9.svg" alt="" />
+        </picture>
+      </a>
+      <div id="navbar-right">
+        <nav>
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/faq.html">FAQ</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/login.html">Tickets</a></li>
+          </ul>
+        </nav>
+        <picture id="hamburger-menu">
+          <a href="#"> <img src="/assets/icons/icon_hamburger.svg" alt="" /></a>
+        </picture>
+      </div>
+    </header>
+    <main>
+      <section class="tickets">
+        <h1 class="selected-date-and-time">Date and time</h1>
+        <div class="payment-card">
+          <div>
+            <div class="card-title">
+              <p><strong>Entry</strong></p>
+              <img src="/assets/icons/icon-info.svg" alt="" />
+            </div>
+            <p>Free</p>
+          </div>
+          <div class="ticket-buttons">
+            <button class="ticket-button" id="decrease-entry">
+              <img src="/assets/icons/icon-minus.svg" alt="" />
+            </button>
+            <p class="number-of-entry-tickets number">0</p>
+            <button class="ticket-button" id="increase-entry">
+              <img src="/assets/icons/icon-plus.svg" alt="" />
+            </button>
+          </div>
+        </div>
+        <div class="payment-card">
+          <div class="payment-card-text">
+            <div class="card-title">
+              <p><strong>Guided Tour</strong></p>
+              <img src="/assets/icons/icon-info.svg" alt="" />
+            </div>
+            <p>Kr. 75,-</p>
+          </div>
+          <div class="ticket-buttons">
+            <button class="ticket-button" id="decrease-tour">
+              <img src="/assets/icons/icon-minus.svg" alt="" />
+            </button>
+            <p class="number-of-guide-tickets number">0</p>
+            <button class="ticket-button" id="increase-tour">
+              <img src="/assets/icons/icon-plus.svg" alt="" />
+            </button>
+          </div>
+        </div>
+        <div class="payment-card">
+          <div class="payment-card-text">
+            <div class="card-title">
+              <p><strong>Payment method</strong></p>
+            </div>
+            <p>change</p>
+          </div>
+          <p><strong>PayPal</strong></p>
+        </div>
+        <div class="payment-card complete">
+          <div class="payment-card-text">
+            <div>
+              <div>
+                <p>Entry x &nbsp</p>
+                <p class="number-of-entry-tickets">0</p>
+              </div>
+              <p>0</p>
+            </div>
+            <div>
+              <div>
+                <p>Guided Tour x &nbsp</p>
+                <p class="number-of-guide-tickets">0</p>
+              </div>
+              <p class="guided-tour-price">0</p>
+            </div>
+            <hr />
+            <div>
+              <p><strong>Total</strong>(incl. VAT)</p>
+              <p class="total-price">0</p>
+            </div>
+          </div>
+          <form action="/success.html">
+            <button type="submit" class="button">Complete Payment</button>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
