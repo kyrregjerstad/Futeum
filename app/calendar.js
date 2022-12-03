@@ -89,7 +89,7 @@ const renderCal = () => {
       e.currentTarget.classList.add("active-date");
       document.querySelector(".timeslots").classList.remove("hidden");
       document.querySelector(".selected-date").innerText = `
-      ${ordinal(e.currentTarget.innerText)} of ${months[date.getMonth()]}
+      ${ordinal(e.currentTarget.innerText)} ${months[date.getMonth()]}
       `;
       selecedDate = `${ordinal(e.currentTarget.innerText)} of ${
         months[date.getMonth()]

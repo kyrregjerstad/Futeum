@@ -652,7 +652,8 @@ footer {
 
 #login-page,
 #tickets-page,
-#checkout-page {
+#checkout-page,
+#success-page {
   background: $gradinet-secondary;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -773,7 +774,7 @@ footer {
   font-size: 1.5em;
   font-family: $font-main;
   letter-spacing: 0;
-  padding-inline: 0;
+  // padding: 2em 1em;
 }
 
 .cal-container {
@@ -950,6 +951,19 @@ footer {
   hr {
     border-bottom: solid #000000;
     margin-block: 0.5em;
+  }
+}
+
+#success-page {
+  h2,
+  p,
+  a {
+    margin-block: 1em;
+  }
+  .qr-code {
+    max-width: 360px;
+    margin: 0 auto;
+    display: block;
   }
 }
 

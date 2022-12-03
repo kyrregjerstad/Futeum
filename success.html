@@ -17,32 +17,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="language" content="English" />
     <link rel="shortcut icon" href="/assets/logos/futeum_emblem_11.svg" />
-    <title>Futeum | Log in</title>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
-      defer
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/Flip.min.js"
-      defer
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"
-      defer
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollToPlugin.min.js"
-      defer
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/TextPlugin.min.js"
-      defer
-    ></script>
-
-    <script src="/app/script.js" type="module"></script>
+    <title>Futeum | Checkout</title>
+    <script src="/app/checkout.js" defer></script>
     <link rel="stylesheet" href="/styles/style.css" />
   </head>
-  <body id="login-page">
+  <body id="success-page">
     <header>
       <a href="/index.html" class="header-logo">
         <picture class="header-logo">
@@ -64,24 +43,18 @@
       </div>
     </header>
     <main>
-      <form id="login-section" action="/checkout.html">
-        <section>
-          <label for="login-section"><h1 id="login-header">Log in</h1></label>
-          <label for="email">Email</label>
-          <input id="email" type="email" />
-          <label for="password">Password</label>
-          <input id="password" type="password" />
-          <button type="submit" class="button">Login</button>
-          <p>Don't already have an account?</p>
-          <p>Click here to <a href="#">register</a></p>
-        </section>
-        <button type="submit" class="button">Continue as guest</button>
-      </form>
-    </main>
-    <div class="chat-bubble">
+      <h1>Success!</h1>
+      <p>
+        Your booking is confirmed and we look forward to seeing you at Futeum.
+        You will shortly receive an <strong>email</strong> with your order
+        confirmation and ticket(s). There is no need to print your ticket,
+        simply scan the <strong> QR code </strong> upon arrival!
+      </p>
+      <h2 class="selected-date-and-time"></h2>
+      <a href="#">Add to calendar</a>
       <picture>
-        <img src="/assets/icons/icon-chat.svg" alt="" />
+        <img class="qr-code" src="/assets/images/1024/1024w_qr.webp" alt="" />
       </picture>
-    </div>
+    </main>
   </body>
 </html>

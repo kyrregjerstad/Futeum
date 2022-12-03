@@ -554,7 +554,8 @@ footer .contact-info {
 
 #login-page,
 #tickets-page,
-#checkout-page {
+#checkout-page,
+#success-page {
   background: linear-gradient(191.54deg, #00a69c 5.32%, #00a66a 92.1%);
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -665,7 +666,6 @@ footer .contact-info {
   font-size: 1.5em;
   font-family: Roboto, sans-serif;
   letter-spacing: 0;
-  padding-inline: 0;
 }
 
 .cal-container {
@@ -849,6 +849,17 @@ footer .contact-info {
 .complete hr {
   border-bottom: solid #000000;
   margin-block: 0.5em;
+}
+
+#success-page h2,
+#success-page p,
+#success-page a {
+  margin-block: 1em;
+}
+#success-page .qr-code {
+  max-width: 360px;
+  margin: 0 auto;
+  display: block;
 }
 
 details summary {
