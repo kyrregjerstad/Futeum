@@ -56,7 +56,14 @@ $gradient-primary: linear-gradient(
   $color-secondary 100%
 );
 
-$gradinet-secondary: linear-gradient(191.54deg, #00a69c 5.32%, #00a66a 92.1%);
+$gradient-seconday: linear-gradient(191.54deg, #00a69c 5.32%, #00a66a 92.1%);
+$gradient-text: linear-gradient(
+  90deg,
+  rgba(255, 255, 255, 1) 0%,
+  rgba(255, 255, 255, 1) 45%,
+  rgba(0, 166, 106, 1) 55%,
+  rgba(0, 166, 106, 1) 100%
+);
 
 $border-radius: 1em;
 
@@ -66,6 +73,8 @@ $font-main: Roboto, sans-serif;
 $font-spot: Spotnik, sans-serif;
 
 $inline-padding: 10px;
+
+$bezier: cubic-bezier(0.71, -0.01, 0.35, 1);
 
 $hr: 3px solid rgba(255, 255, 255, 0.5);
 $tablet-breakpoint: 800px;
@@ -262,9 +271,8 @@ header {
 
     .line {
       transition: translate 300ms 400ms ease-in-out,
-        rotate 300ms 400ms ease-in-out,
-        stroke-dasharray 1000ms cubic-bezier(0.71, -0.01, 0.35, 1),
-        stroke-dashoffset 1000ms cubic-bezier(0.71, -0.01, 0.35, 1);
+        rotate 300ms 400ms ease-in-out, stroke-dasharray 1000ms $bezier,
+        stroke-dashoffset 1000ms $bezier;
       stroke-dasharray: 60 31 60 31 60 500;
       transform-origin: center;
     }
@@ -285,6 +293,45 @@ header {
   @media (min-width: $tablet-breakpoint) {
     li {
       display: inline-block;
+    }
+  }
+}
+
+#sidebar {
+  position: fixed;
+  height: 100%;
+  @include glassMorphism();
+  background-color: #000000;
+  right: 0;
+  z-index: 10;
+  translate: 100%;
+  transition: translate 500ms;
+
+  ul {
+    direction: rtl;
+    font-size: 1.5em;
+    line-height: 1.8em;
+    text-align: right;
+    margin: 1em 1.5em;
+  }
+
+  li {
+    a {
+      transition: all 500ms;
+      background: $gradient-text;
+      background-size: 250% 200%;
+      background-clip: text;
+      background-position: left;
+      color: transparent;
+    }
+
+    &:hover {
+      list-style: disc;
+      color: $color-primary;
+
+      a {
+        background-position: right;
+      }
     }
   }
 }
@@ -530,7 +577,7 @@ footer {
     text-decoration: underline;
     font-size: clamp(0.3em, 4vw, 1em);
     text-decoration-thickness: 0.05em;
-    transition: all 350ms cubic-bezier(0.71, -0.01, 0.35, 1);
+    transition: all 350ms $bezier;
     overflow: hidden;
 
     img {
@@ -538,7 +585,7 @@ footer {
       z-index: -1;
       filter: blur(2px);
       opacity: 0.1;
-      transition: all 350ms cubic-bezier(0.71, -0.01, 0.35, 1);
+      transition: all 350ms $bezier;
     }
 
     &:hover {
@@ -712,7 +759,7 @@ footer {
 #tickets-page,
 #checkout-page,
 #success-page {
-  background: $gradinet-secondary;
+  background: $gradient-seconday;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }

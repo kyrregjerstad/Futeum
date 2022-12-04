@@ -223,6 +223,43 @@ header #hamburger-button:focus, header #hamburger-button:active {
   }
 }
 
+#sidebar {
+  position: fixed;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);
+  background-color: #000000;
+  right: 0;
+  z-index: 10;
+  translate: 100%;
+  transition: translate 500ms;
+}
+#sidebar ul {
+  direction: rtl;
+  font-size: 1.5em;
+  line-height: 1.8em;
+  text-align: right;
+  margin: 1em 1.5em;
+}
+#sidebar li a {
+  transition: all 500ms;
+  background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 45%, rgb(0, 166, 106) 55%, rgb(0, 166, 106) 100%);
+  background-size: 250% 200%;
+  -webkit-background-clip: text;
+          background-clip: text;
+  background-position: left;
+  color: transparent;
+}
+#sidebar li:hover {
+  list-style: disc;
+  color: #00a66a;
+}
+#sidebar li:hover a {
+  background-position: right;
+}
+
 footer {
   display: flex;
   justify-content: center;
