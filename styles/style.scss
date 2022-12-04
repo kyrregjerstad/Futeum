@@ -47,9 +47,6 @@ $color-dark-semiTrans: #1e474bb2;
 $color-black: #000000;
 $color-white: #ffffff;
 $color-white-semiTrans: #ffffff84;
-$inline-padding: 10px;
-
-$hr: 3px solid rgba(255, 255, 255, 0.5);
 
 $gradient-primary: linear-gradient(
   180deg,
@@ -59,12 +56,18 @@ $gradient-primary: linear-gradient(
 
 $gradinet-secondary: linear-gradient(191.54deg, #00a69c 5.32%, #00a66a 92.1%);
 
-$font-main: Roboto, sans-serif;
-$font-spot: Spotnik, sans-serif;
+$border-radius: 1em;
 
 $shadow-main: -4px 4px 6px rgba(0, 0, 0, 0.15);
 
+$font-main: Roboto, sans-serif;
+$font-spot: Spotnik, sans-serif;
+
+$inline-padding: 10px;
+
+$hr: 3px solid rgba(255, 255, 255, 0.5);
 $tablet-breakpoint: 800px;
+$cal-max-width: 768px;
 
 @mixin highlighter {
   background: $color-dark-semiTrans;
@@ -106,7 +109,6 @@ html {
 body {
   position: relative;
   background: $gradient-primary;
-  // width: 100%;
 
   &::-webkit-scrollbar {
     width: 10px;
@@ -120,11 +122,11 @@ body {
   &::-webkit-scrollbar-thumb {
     background-color: $color-dark;
 
-    border-radius: 1em;
+    border-radius: $border-radius;
   }
 }
 
-body a {
+a {
   color: $color-white;
   text-decoration: none;
 }
@@ -177,8 +179,40 @@ img {
   object-fit: cover;
 }
 
-button {
+button,
+details,
+summary,
+a {
   cursor: pointer;
+}
+
+summary {
+  font-size: 1.5em;
+}
+
+details summary > * {
+  display: inline;
+}
+
+input,
+textarea {
+  padding: 1em;
+  margin-bottom: 1em;
+  border-radius: $border-radius;
+  outline: none;
+  border: none;
+
+  &:active,
+  &:focus,
+  &:valid {
+    outline: solid 1px $color-primary;
+    border: none;
+  }
+
+  &:required:invalid {
+    outline: solid 1px red;
+    border: none;
+  }
 }
 
 main {
@@ -187,20 +221,15 @@ main {
   overflow-x: hidden;
 }
 
-.hidden {
-  opacity: 0;
-}
-
 header {
   @include flexCenter();
+  justify-content: space-between;
   position: sticky;
   top: 0;
   z-index: 999;
-  justify-content: space-between;
-  width: 100%;
   height: 4em;
-  box-shadow: $shadow-main;
   background-color: $color-black;
+  box-shadow: $shadow-main;
 
   .header-logo {
     display: flex;
@@ -209,9 +238,7 @@ header {
   }
 
   #navbar-right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexCenter();
   }
 
   #hamburger-menu img {
@@ -233,6 +260,77 @@ header {
   }
 }
 
+footer {
+  @include flexCenter();
+  height: 500px;
+  background-color: $color-dark;
+  color: $color-white;
+
+  .footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2em;
+  }
+
+  #newsletter {
+    display: flex;
+    flex-direction: column;
+
+    h6 {
+      font-size: 1.3em;
+      margin-block: 0.5em;
+    }
+
+    form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    input {
+      border: none;
+      padding: 1em;
+      margin-bottom: 0;
+      border-radius: 1em 0 0 1em;
+      flex: 3;
+
+      &:focus,
+      &:active {
+        outline: none;
+      }
+    }
+
+    button {
+      border: solid white 3px;
+      background-color: $color-primary;
+      padding: 0.8em;
+      margin-right: 0.22em;
+      color: $color-white;
+      flex: 1;
+      border-radius: 0 1em 1em 0;
+    }
+  }
+
+  #opening-hours {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding-block: 2em;
+    text-align: justify;
+  }
+
+  .contact-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+.hidden {
+  opacity: 0;
+}
+
 .button {
   @include flexCenter();
   padding: 1em 2em;
@@ -244,7 +342,6 @@ header {
   font-weight: 700;
   font-size: 1.5em;
   letter-spacing: 0.06em;
-  cursor: pointer;
   margin: 1em auto;
 }
 
@@ -318,15 +415,6 @@ header {
       position: relative;
     }
   }
-
-  // @keyframes background {
-  //   0% {
-  //     transform: scale(1);
-  //   }
-  //   100% {
-  //     transform: scale(1.5) rotate(15deg);
-  //   }
-  // }
 
   .card-text {
     position: relative;
@@ -402,14 +490,14 @@ header {
   cursor: pointer;
 
   a {
-    @include highlighter();
     @include flexCenter();
     @include glassMorphism();
-    border-radius: 1em 0em 1em 0em;
-    text-align: center;
+    @include highlighter();
+    width: 30%;
     margin-block: 0.2em;
     padding: 2em;
-    width: 30%;
+    border-radius: 1em 0em 1em 0em;
+    text-align: center;
     text-decoration: underline;
     font-size: clamp(0.3em, 4vw, 1em);
     text-decoration-thickness: 0.05em;
@@ -420,13 +508,8 @@ header {
       position: absolute;
       z-index: -1;
       filter: blur(2px);
-      opacity: 0.05;
+      opacity: 0.1;
       transition: all 350ms cubic-bezier(0.71, -0.01, 0.35, 1);
-
-      &:hover {
-        opacity: 1;
-        filter: blur(1px);
-      }
     }
 
     &:hover {
@@ -442,6 +525,7 @@ header {
       border-radius: 1em 1em 0em 0em;
     }
   }
+
   a:nth-child(3) {
     border-radius: 0em 1em 0em 1em;
 
@@ -450,22 +534,6 @@ header {
     }
   }
 }
-// #nav-links {
-//   @include flexCenter();
-//   flex-direction: column;
-//   font-size: 2em;
-//   font-weight: bold;
-//   letter-spacing: 0.05em;
-
-//   li {
-//     @include highlighter();
-//     align-self: flex-end;
-//     margin-block: 0.2em;
-//     padding-inline: $inline-padding;
-//     text-decoration: underline;
-//     text-decoration-thickness: 0.05em;
-//   }
-// }
 
 .line-break {
   display: flex;
@@ -479,7 +547,7 @@ header {
 
   hr {
     border: $hr;
-    border-radius: 1em;
+    border-radius: $border-radius;
     backdrop-filter: blur(3px);
     width: 80%;
   }
@@ -495,11 +563,13 @@ header {
   @include glassMorphism();
   display: flex;
   justify-content: flex-start;
-  overflow: hidden;
+  margin-block: 1em;
   height: 130px;
   border-radius: 1.5em;
-  margin-block: 1em;
+  overflow: hidden;
   opacity: 0;
+  outline: solid #00a66900 2px;
+  transition: outline 350ms;
 
   .card-teaser-image {
     width: 25%;
@@ -530,7 +600,6 @@ header {
     font-size: 1.2em;
     font-weight: 300;
     text-decoration-thickness: 0.04em;
-    cursor: pointer;
   }
 
   a h5 {
@@ -542,7 +611,6 @@ header {
     flex-direction: row;
     align-items: center;
     height: 100%;
-    // width: 100%;
     flex-wrap: nowrap;
 
     img {
@@ -554,7 +622,7 @@ header {
   }
 
   &:hover {
-    transform: scale(1.2);
+    outline: solid $color-primary 2px;
   }
 }
 
@@ -599,68 +667,16 @@ header {
   border: solid $color-white;
 }
 
-footer {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-
-  height: 500px;
-  background-color: $color-dark;
-  color: $color-white;
-
-  .footer-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2em;
-  }
-
-  #newsletter {
-    display: flex;
-    flex-direction: column;
-
-    h6 {
-      font-size: 1.3em;
-      margin-block: 0.5em;
-    }
-    form {
-      display: flex;
-    }
-
-    input {
-      border: none;
-      padding: 1em;
-      flex: 3;
-
-      &:focus {
-        outline: none;
-      }
-    }
-
-    button {
-      border: solid white;
-      background-color: $color-primary;
-      padding: 0.8em;
-      margin-right: 0.22em;
-      color: $color-white;
-      flex: 1;
-    }
-  }
-
-  #opening-hours {
-    padding-top: 2em;
-
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    text-align: justify;
-  }
-
-  .contact-info {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
+.chat-bubble::after {
+  // content: "";
+  width: 350px;
+  height: 550px;
+  position: absolute;
+  background-color: $color-white;
+  border: solid black 2px;
+  border-radius: $border-radius;
+  right: 0;
+  bottom: 0;
 }
 
 #login-page,
@@ -707,7 +723,7 @@ footer {
 
     input {
       height: 3rem;
-      border-radius: 1em;
+      border-radius: $border-radius;
       padding: 1em;
       border: solid 1px $color-white-semiTrans;
       @include glassMorphism();
@@ -771,39 +787,25 @@ footer {
   }
 }
 
-.chat-bubble::after {
-  // content: "";
-  width: 350px;
-  height: 550px;
-  position: absolute;
-  background-color: $color-white;
-  border: solid black 2px;
-  border-radius: 1em;
-  right: 0;
-  bottom: 0;
-}
-
 .calendar-headings {
   font-size: 1.5em;
   font-family: $font-main;
   letter-spacing: 0;
   margin: 1em 0;
-  // padding: 2em 1em;
 }
 
 .cal-container {
   @include flexCenter();
   flex-direction: column;
   margin: 0 auto;
-
-  max-width: 768px;
+  max-width: $cal-max-width;
 }
 
 .calendar {
   @include glassMorphism();
   margin-inline: 1em;
   width: 100%;
-  max-width: 768px;
+  max-width: $cal-max-width;
   box-shadow: $shadow-main;
   border-radius: 2em;
 }
@@ -816,14 +818,13 @@ footer {
   border-radius: 2em 2em 0 0;
   padding: 0 1em;
   text-align: center;
-  color: #000000;
 
   .date {
     padding: 1em;
   }
 
   h2 {
-    color: #000000;
+    color: $color-black;
     font-size: 2em;
     text-transform: uppercase;
     margin-bottom: 0.5em;
@@ -836,7 +837,6 @@ footer {
 
 .weekdays,
 .days-of-month {
-  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   justify-content: center;
@@ -869,13 +869,13 @@ footer {
 }
 
 .timeslots-container {
-  max-width: 768px;
+  max-width: $cal-max-width;
   margin: 0 auto;
 }
 
 .timeslots {
-  border-radius: 1em;
   @include glassMorphism();
+  border-radius: $border-radius;
   font-size: 1.2em;
 
   li {
@@ -946,6 +946,7 @@ footer {
     border-radius: 50%;
   }
 }
+
 .complete {
   flex-direction: column;
 
@@ -982,36 +983,15 @@ footer {
 }
 
 #contact {
+  @include glassMorphism();
+  max-width: 640px;
   margin: 2em auto;
-  width: 640px;
   padding: 2em;
   border-radius: 2em;
-  @include glassMorphism();
 
   form {
     display: flex;
     flex-direction: column;
-
-    input,
-    textarea {
-      padding: 1em;
-      margin-bottom: 1em;
-      border-radius: 1em;
-      outline: none;
-      border: none;
-
-      &:active,
-      &:focus,
-      &:valid {
-        outline: solid 1px $color-primary;
-        border: none;
-      }
-
-      &:required:invalid {
-        outline: solid 1px red;
-        border: none;
-      }
-    }
 
     #formMessage {
       height: 15em;
@@ -1023,15 +1003,6 @@ footer {
   }
 }
 
-details summary {
-  cursor: pointer;
-}
-details summary > * {
-  display: inline;
-}
-summary {
-  font-size: 1.5em;
-}
 .faq-section {
   padding: 0.5em;
 }
