@@ -196,7 +196,6 @@ header li {
 header #hamburger-button {
   background: transparent;
   border: none;
-  overflow: hidden;
   --hamburger-color: #00a66a;
 }
 header #hamburger-button #hamburger {
