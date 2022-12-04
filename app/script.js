@@ -126,3 +126,17 @@ ScrollTrigger.batch(".card-teaser-text", {
     );
   },
 });
+
+const hamburgerMenu = document.querySelector("#hamburger-button");
+
+hamburgerMenu.addEventListener("click", () => {
+  const currentState = hamburgerMenu.getAttribute("data-state");
+
+  if (!currentState || currentState === "closed") {
+    hamburgerMenu.setAttribute("data-state", "opened");
+    hamburgerMenu.setAttribute("aria-expanded", "true");
+  } else {
+    hamburgerMenu.setAttribute("data-state", "closed");
+    hamburgerMenu.setAttribute("aria-expanded", "false");
+  }
+});

@@ -63,9 +63,26 @@
             <li><a href="/tickets.html">Tickets</a></li>
           </ul>
         </nav>
-        <picture id="hamburger-menu">
-          <a href="#"> <img src="/assets/icons/icon_hamburger.svg" alt="" /></a>
-        </picture>
+        <button
+          id="hamburger-button"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+        >
+          <svg
+            stroke="var(--hamburger-color)"
+            fill="none"
+            id="hamburger"
+            viewBox="0 10 100 100"
+          >
+            <path
+              d="m 20 40 h 60 a 1 1 0 0 1 0 20 h -60 a 1 1 0 0 0 0 20 h 60 a 1 1 0 0 1 0 20 h -10 c -15 0 -20 0 -20 -20 v -70"
+              class="line"
+              stroke-width="7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
+        </button>
       </div>
     </header>
     <main>
