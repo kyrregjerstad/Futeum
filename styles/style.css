@@ -536,6 +536,16 @@ textarea:required:invalid {
   margin-block: 0.5em;
 }
 
+.tickets {
+  max-width: 650px;
+  margin: 0 auto;
+}
+.tickets h1 {
+  font-size: 2em;
+  margin: 0.5em;
+  text-align: center;
+}
+
 body {
   position: relative;
   background: linear-gradient(180deg, #00a66a 0%, #0056a6 100%);
@@ -834,6 +844,10 @@ details summary > * {
   box-shadow: none;
 }
 
+.faq-section {
+  padding: 0.5em;
+}
+
 #login-section {
   max-width: 636px;
   margin: 0 auto;
@@ -987,17 +1001,4 @@ details summary > * {
   #login-header {
     font-size: 5em;
   }
-}
-.tickets {
-  max-width: 650px;
-  margin: 0 auto;
-}
-.tickets h1 {
-  font-size: 2em;
-  margin: 0.5em;
-  text-align: center;
-}
-
-.faq-section {
-  padding: 0.5em;
 }/*# sourceMappingURL=style.css.map */

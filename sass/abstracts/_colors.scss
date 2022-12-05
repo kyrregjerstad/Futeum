@@ -19,3 +19,19 @@ $gradient-text: linear-gradient(
   rgba(0, 166, 106, 1) 55%,
   rgba(0, 166, 106, 1) 100%
 );
+
+$colors: (
+  neutral: (
+    light: white,
+    lightSemiTrans: #ffffff84,
+    normal: gray,
+    dark: black,
+  ),
+  primary: (
+    light: #00a66a,
+    lightSemitrans: #00a66978,
+    normal: #0056a6,
+    dark: #1e474b,
+    darkSemiTrans: #1e474bb2,
+  ),
+);
