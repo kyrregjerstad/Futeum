@@ -1,0 +1,21 @@
+$primary: #00a66a;
+$primary-semiTrans: #00a66978;
+$secondary: #0056a6;
+$dark: #1e474b;
+$dark-semiTrans: #1e474bb2;
+$black: #000000;
+$white: #ffffff;
+$white-semiTrans: #ffffff84;
+
+$hamburger-color: $black;
+
+$gradient-primary: linear-gradient(180deg, $primary 0%, $secondary 100%);
+
+$gradient-seconday: linear-gradient(191.54deg, #00a69c 5.32%, #00a66a 92.1%);
+$gradient-text: linear-gradient(
+  90deg,
+  rgba(255, 255, 255, 1) 0%,
+  rgba(255, 255, 255, 1) 45%,
+  rgba(0, 166, 106, 1) 55%,
+  rgba(0, 166, 106, 1) 100%
+);

@@ -1,70 +1,7 @@
-@import "variables";
-
-@font-face {
-  font-family: Spotnik;
-  src: url(/assets/fonts/SPOTNIK.otf);
-  font-display: swap;
-}
-@font-face {
-  font-family: Spotnik;
-  src: url(/assets/fonts/SPOTNIK-Bold.otf);
-  font-weight: bold;
-  font-display: swap;
-}
-@font-face {
-  font-family: Roboto;
-  src: url(/assets/fonts/Roboto-Thin.ttf);
-  font-weight: 100;
-  font-display: swap;
-}
-@font-face {
-  font-family: Roboto;
-  src: url(/assets/fonts/Roboto-Light.ttf);
-  font-weight: 300;
-  font-display: swap;
-}
-@font-face {
-  font-family: Roboto;
-  src: url(/assets/fonts/Roboto-Regular.ttf);
-  font-weight: 400;
-  font-display: swap;
-}
-@font-face {
-  font-family: Roboto;
-  src: url(/assets/fonts/Roboto-Medium.ttf);
-  font-weight: 500;
-  font-display: swap;
-}
-@font-face {
-  font-family: Roboto;
-  src: url(/assets/fonts/Roboto-Bold.ttf);
-  font-weight: 700;
-}
-
-@mixin highlighter {
-  background: $color-dark-semiTrans;
-  backdrop-filter: blur(5px);
-  box-shadow: $shadow-main;
-}
-
-@mixin headerHighlight() {
-  background: $color-dark;
-  display: inline;
-  box-shadow: $shadow-main;
-  padding-inline: 10px;
-}
-
-@mixin flexCenter() {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@mixin glassMorphism {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(4px);
-  box-shadow: $shadow-main;
-}
+@use "variables" as *;
+@use "colors";
+@use "fonts" as *;
+@use "mixins" as *;
 
 *,
 *::before,
@@ -80,7 +17,7 @@ html {
 
 body {
   position: relative;
-  background: $gradient-primary;
+  background: colors.$gradient-primary;
 
   &::-webkit-scrollbar {
     width: 10px;
@@ -92,14 +29,13 @@ body {
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: $color-dark;
-
+    background-color: colors.$dark;
     border-radius: $border-radius;
   }
 }
 
 a {
-  color: $color-white;
+  color: colors.$white;
   text-decoration: none;
 }
 
@@ -109,7 +45,7 @@ ul {
 
 h1 {
   font-size: 5em;
-  color: $color-white;
+  color: colors.$white;
   letter-spacing: 0.1em;
 }
 
@@ -119,18 +55,18 @@ h2 {
   letter-spacing: 0.15em;
   font-weight: 300;
   text-transform: uppercase;
-  color: $color-white;
+  color: colors.$white;
 }
 
 h3 {
   font-size: 3em;
-  color: $color-white;
+  color: colors.$white;
   padding-inline: $inline-padding;
 }
 
 h4 {
   font-size: 2em;
-  color: $color-white;
+  color: colors.$white;
   font-weight: 200;
   @include highlighter();
   display: inline-block;
@@ -177,7 +113,7 @@ textarea {
   &:active,
   &:focus,
   &:valid {
-    outline: solid 1px $color-primary;
+    outline: solid 1px colors.$primary;
     border: none;
   }
 
@@ -200,7 +136,7 @@ header {
   top: 0;
   z-index: 999;
   height: 4em;
-  background-color: $color-black;
+  background-color: colors.$black;
   box-shadow: $shadow-main;
 
   .header-logo {
@@ -280,7 +216,7 @@ header {
 
     a {
       transition: all 500ms;
-      background: $gradient-text;
+      background: colors.$gradient-text;
       background-size: 250% 200%;
       background-clip: text;
       background-position: left;
@@ -291,7 +227,7 @@ header {
       content: "⬤";
       position: absolute;
       right: -2em;
-      color: $color-primary;
+      color: colors.$primary;
       font-size: 0.5em;
       opacity: 0;
       translate: 3em;
@@ -307,7 +243,7 @@ header {
 
     &:hover {
       // list-style: disc;
-      color: $color-primary;
+      color: colors.$primary;
 
       a {
         background-position: right;
@@ -319,8 +255,8 @@ header {
 footer {
   @include flexCenter();
   height: 500px;
-  background-color: $color-dark;
-  color: $color-white;
+  background-color: colors.$dark;
+  color: colors.$white;
 
   .footer-wrapper {
     display: flex;
@@ -360,10 +296,10 @@ footer {
 
     button {
       border: solid white 3px;
-      background-color: $color-primary;
+      background-color: colors.$primary;
       padding: 0.8em;
       margin-right: 0.22em;
-      color: $color-white;
+      color: colors.$white;
       flex: 1;
       border-radius: 0 1em 1em 0;
     }
@@ -390,11 +326,11 @@ footer {
 .button {
   @include flexCenter();
   padding: 1em 2em;
-  background-color: $color-primary;
-  border: 0.1em solid $color-white;
+  background-color: colors.$primary;
+  border: 0.1em solid colors.$white;
   box-shadow: $shadow-main;
   border-radius: 2em;
-  color: $color-white;
+  color: colors.$white;
   font-weight: 700;
   font-size: 1.5em;
   letter-spacing: 0.06em;
@@ -427,7 +363,7 @@ footer {
   font-size: 3em;
   line-height: 1.2em;
   font-weight: 200;
-  color: $color-white;
+  color: colors.$white;
 
   li:nth-child(1) {
     font-weight: 500;
@@ -439,7 +375,7 @@ footer {
   width: 90%;
   margin-inline: 5%;
 
-  background-color: $color-black;
+  background-color: colors.$black;
   border-radius: 2em;
 
   box-shadow: $shadow-main;
@@ -486,7 +422,7 @@ footer {
   }
 
   .card-info {
-    color: $color-white;
+    color: colors.$white;
     padding: 2em 1em 1em 1em;
     line-height: 120%;
     text-align: justify;
@@ -522,7 +458,7 @@ footer {
     #landing-title {
       letter-spacing: 0.2em;
       font-size: 4em;
-      color: $color-white;
+      color: colors.$white;
     }
   }
 }
@@ -651,7 +587,7 @@ footer {
   }
 
   a {
-    color: $color-black;
+    color: colors.$black;
     text-decoration: underline;
     font-size: 1.2em;
     font-weight: 300;
@@ -678,7 +614,7 @@ footer {
   }
 
   &:hover {
-    outline: solid $color-primary 2px;
+    outline: solid colors.$primary 2px;
   }
 }
 
@@ -712,7 +648,7 @@ footer {
 .chat-bubble {
   @include flexCenter();
   @include glassMorphism();
-  background-color: $color-primary-semiTrans;
+  background-color: colors.$primary-semiTrans;
   width: 2em;
   position: fixed;
   bottom: 1em;
@@ -720,7 +656,7 @@ footer {
   border-radius: 50%;
   width: 75px;
   height: 75px;
-  border: solid $color-white;
+  border: solid colors.$white;
 }
 
 .chat-bubble::after {
@@ -728,7 +664,7 @@ footer {
   width: 350px;
   height: 550px;
   position: absolute;
-  background-color: $color-white;
+  background-color: colors.$white;
   border: solid black 2px;
   border-radius: $border-radius;
   right: 0;
@@ -739,7 +675,7 @@ footer {
 #tickets-page,
 #checkout-page,
 #success-page {
-  background: $gradient-seconday;
+  background: colors.$gradient-seconday;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -781,7 +717,7 @@ footer {
       height: 3rem;
       border-radius: $border-radius;
       padding: 1em;
-      border: solid 1px $color-white-semiTrans;
+      border: solid 1px colors.$white-semiTrans;
       @include glassMorphism();
       box-shadow: none;
       transition: box-shadow 300ms;
@@ -797,13 +733,13 @@ footer {
   button {
     width: 100%;
     margin-block: 2em;
-    border: solid 2px $color-white-semiTrans;
+    border: solid 2px colors.$white-semiTrans;
     box-shadow: none;
   }
 
   button:nth-of-type(even) {
     margin-top: 20%;
-    background: $color-dark;
+    background: colors.$dark;
     border: none;
     box-shadow: $shadow-main;
   }
@@ -870,7 +806,7 @@ footer {
   @include flexCenter();
   justify-content: space-between;
   width: 100%;
-  background-color: $color-primary;
+  background-color: colors.$primary;
   border-radius: 2em 2em 0 0;
   padding: 0 1em;
   text-align: center;
@@ -880,7 +816,7 @@ footer {
   }
 
   h2 {
-    color: $color-black;
+    color: colors.$black;
     font-size: 2em;
     text-transform: uppercase;
     margin-bottom: 0.5em;
@@ -950,7 +886,7 @@ footer {
 .active-date,
 .timeslots li:hover,
 .active-time {
-  background-color: $color-primary !important;
+  background-color: colors.$primary !important;
   transition: all 350ms;
   border-radius: 0.5em;
   outline: solid grey 1px;
@@ -995,7 +931,7 @@ footer {
 
   .ticket-button {
     @include flexCenter();
-    background-color: $color-primary;
+    background-color: colors.$primary;
     border: solid 1px #ffffff;
     height: 5em;
     width: 5em;

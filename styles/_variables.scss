@@ -1,40 +1,7 @@
-$color-primary: #00a66a;
-$color-primary-semiTrans: #00a66978;
-$color-secondary: #0056a6;
-$color-dark: #1e474b;
-$color-dark-semiTrans: #1e474bb2;
-$color-black: #000000;
-$color-white: #ffffff;
-$color-white-semiTrans: #ffffff84;
-
-$hamburger-color: $color-black;
-
-$gradient-primary: linear-gradient(
-  180deg,
-  $color-primary 0%,
-  $color-secondary 100%
-);
-
-$gradient-seconday: linear-gradient(191.54deg, #00a69c 5.32%, #00a66a 92.1%);
-$gradient-text: linear-gradient(
-  90deg,
-  rgba(255, 255, 255, 1) 0%,
-  rgba(255, 255, 255, 1) 45%,
-  rgba(0, 166, 106, 1) 55%,
-  rgba(0, 166, 106, 1) 100%
-);
-
 $border-radius: 1em;
-
 $shadow-main: -4px 4px 6px rgba(0, 0, 0, 0.15);
-
-$font-main: Roboto, sans-serif;
-$font-spot: Spotnik, sans-serif;
-
 $inline-padding: 10px;
-
 $bezier: cubic-bezier(0.71, -0.01, 0.35, 1);
-
 $hr: 3px solid rgba(255, 255, 255, 0.5);
 $tablet-breakpoint: 800px;
 $cal-max-width: 768px;
