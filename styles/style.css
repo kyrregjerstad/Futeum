@@ -39,6 +39,126 @@
   src: url(/assets/fonts/Roboto-Bold.ttf);
   font-weight: 700;
 }
+.calendar-headings {
+  font-size: 1.5em;
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0;
+  margin: 1em 0;
+}
+
+.cal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 768px;
+}
+
+.calendar {
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);
+  margin-inline: 1em;
+  width: 100%;
+  max-width: 768px;
+  box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);
+  border-radius: 2em;
+}
+
+.month {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #00a66a;
+  border-radius: 2em 2em 0 0;
+  padding: 0 1em;
+  text-align: center;
+}
+.month .date {
+  padding: 1em;
+}
+.month h2 {
+  color: #000000;
+  font-size: 2em;
+  text-transform: uppercase;
+  margin-bottom: 0.5em;
+}
+.month p {
+  font-size: 1.6em;
+}
+
+.weekdays,
+.days-of-month {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.weekdays div,
+.days-of-month div {
+  padding: 1em 0;
+}
+
+.day:nth-child(7n-6),
+.prev-month-date,
+.next-month-date {
+  opacity: 0.2;
+}
+.day:nth-child(7n-6):hover,
+.prev-month-date:hover,
+.next-month-date:hover {
+  pointer-events: none;
+  background-color: unset;
+  transition: unset;
+  border-radius: 0.5em;
+  outline: none;
+}
+
+.today {
+  background-color: rgba(211, 211, 211, 0.526);
+  border: solid grey 1px;
+  border-radius: 0.5em;
+}
+
+.timeslots-container {
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.timeslots {
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);
+  border-radius: 1em;
+  font-size: 1.2em;
+}
+.timeslots li {
+  display: inline-block;
+  padding: 0.5em;
+  width: 100%;
+  cursor: pointer;
+}
+.timeslots li:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.0901960784);
+}
+
+.days-of-month div:hover,
+.active-date,
+.timeslots li:hover,
+.active-time {
+  background-color: #00a66a !important;
+  transition: all 350ms;
+  border-radius: 0.5em;
+  outline: solid grey 1px;
+  cursor: pointer;
+}
+
 *,
 *::before,
 *::after {

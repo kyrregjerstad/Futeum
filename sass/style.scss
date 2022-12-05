@@ -1,7 +1,6 @@
-@use "variables" as *;
-@use "colors";
-@use "fonts" as *;
-@use "mixins" as *;
+@use "abstracts" as *;
+@use "base" as *;
+@use "components" as *;
 
 *,
 *::before,
@@ -17,7 +16,7 @@ html {
 
 body {
   position: relative;
-  background: colors.$gradient-primary;
+  background: $gradient-primary;
 
   &::-webkit-scrollbar {
     width: 10px;
@@ -29,13 +28,13 @@ body {
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: colors.$dark;
+    background-color: $dark;
     border-radius: $border-radius;
   }
 }
 
 a {
-  color: colors.$white;
+  color: $white;
   text-decoration: none;
 }
 
@@ -45,7 +44,7 @@ ul {
 
 h1 {
   font-size: 5em;
-  color: colors.$white;
+  color: $white;
   letter-spacing: 0.1em;
 }
 
@@ -55,18 +54,18 @@ h2 {
   letter-spacing: 0.15em;
   font-weight: 300;
   text-transform: uppercase;
-  color: colors.$white;
+  color: $white;
 }
 
 h3 {
   font-size: 3em;
-  color: colors.$white;
+  color: $white;
   padding-inline: $inline-padding;
 }
 
 h4 {
   font-size: 2em;
-  color: colors.$white;
+  color: $white;
   font-weight: 200;
   @include highlighter();
   display: inline-block;
@@ -113,7 +112,7 @@ textarea {
   &:active,
   &:focus,
   &:valid {
-    outline: solid 1px colors.$primary;
+    outline: solid 1px $primary;
     border: none;
   }
 
@@ -136,7 +135,7 @@ header {
   top: 0;
   z-index: 999;
   height: 4em;
-  background-color: colors.$black;
+  background-color: $black;
   box-shadow: $shadow-main;
 
   .header-logo {
@@ -216,7 +215,7 @@ header {
 
     a {
       transition: all 500ms;
-      background: colors.$gradient-text;
+      background: $gradient-text;
       background-size: 250% 200%;
       background-clip: text;
       background-position: left;
@@ -227,7 +226,7 @@ header {
       content: "⬤";
       position: absolute;
       right: -2em;
-      color: colors.$primary;
+      color: $primary;
       font-size: 0.5em;
       opacity: 0;
       translate: 3em;
@@ -243,7 +242,7 @@ header {
 
     &:hover {
       // list-style: disc;
-      color: colors.$primary;
+      color: $primary;
 
       a {
         background-position: right;
@@ -255,8 +254,8 @@ header {
 footer {
   @include flexCenter();
   height: 500px;
-  background-color: colors.$dark;
-  color: colors.$white;
+  background-color: $dark;
+  color: $white;
 
   .footer-wrapper {
     display: flex;
@@ -296,10 +295,10 @@ footer {
 
     button {
       border: solid white 3px;
-      background-color: colors.$primary;
+      background-color: $primary;
       padding: 0.8em;
       margin-right: 0.22em;
-      color: colors.$white;
+      color: $white;
       flex: 1;
       border-radius: 0 1em 1em 0;
     }
@@ -326,11 +325,11 @@ footer {
 .button {
   @include flexCenter();
   padding: 1em 2em;
-  background-color: colors.$primary;
-  border: 0.1em solid colors.$white;
+  background-color: $primary;
+  border: 0.1em solid $white;
   box-shadow: $shadow-main;
   border-radius: 2em;
-  color: colors.$white;
+  color: $white;
   font-weight: 700;
   font-size: 1.5em;
   letter-spacing: 0.06em;
@@ -363,7 +362,7 @@ footer {
   font-size: 3em;
   line-height: 1.2em;
   font-weight: 200;
-  color: colors.$white;
+  color: $white;
 
   li:nth-child(1) {
     font-weight: 500;
@@ -375,7 +374,7 @@ footer {
   width: 90%;
   margin-inline: 5%;
 
-  background-color: colors.$black;
+  background-color: $black;
   border-radius: 2em;
 
   box-shadow: $shadow-main;
@@ -422,7 +421,7 @@ footer {
   }
 
   .card-info {
-    color: colors.$white;
+    color: $white;
     padding: 2em 1em 1em 1em;
     line-height: 120%;
     text-align: justify;
@@ -458,7 +457,7 @@ footer {
     #landing-title {
       letter-spacing: 0.2em;
       font-size: 4em;
-      color: colors.$white;
+      color: $white;
     }
   }
 }
@@ -587,7 +586,7 @@ footer {
   }
 
   a {
-    color: colors.$black;
+    color: $black;
     text-decoration: underline;
     font-size: 1.2em;
     font-weight: 300;
@@ -614,7 +613,7 @@ footer {
   }
 
   &:hover {
-    outline: solid colors.$primary 2px;
+    outline: solid $primary 2px;
   }
 }
 
@@ -648,7 +647,7 @@ footer {
 .chat-bubble {
   @include flexCenter();
   @include glassMorphism();
-  background-color: colors.$primary-semiTrans;
+  background-color: $primary-semiTrans;
   width: 2em;
   position: fixed;
   bottom: 1em;
@@ -656,7 +655,7 @@ footer {
   border-radius: 50%;
   width: 75px;
   height: 75px;
-  border: solid colors.$white;
+  border: solid $white;
 }
 
 .chat-bubble::after {
@@ -664,7 +663,7 @@ footer {
   width: 350px;
   height: 550px;
   position: absolute;
-  background-color: colors.$white;
+  background-color: $white;
   border: solid black 2px;
   border-radius: $border-radius;
   right: 0;
@@ -675,7 +674,7 @@ footer {
 #tickets-page,
 #checkout-page,
 #success-page {
-  background: colors.$gradient-seconday;
+  background: $gradient-seconday;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -717,7 +716,7 @@ footer {
       height: 3rem;
       border-radius: $border-radius;
       padding: 1em;
-      border: solid 1px colors.$white-semiTrans;
+      border: solid 1px $white-semiTrans;
       @include glassMorphism();
       box-shadow: none;
       transition: box-shadow 300ms;
@@ -733,13 +732,13 @@ footer {
   button {
     width: 100%;
     margin-block: 2em;
-    border: solid 2px colors.$white-semiTrans;
+    border: solid 2px $white-semiTrans;
     box-shadow: none;
   }
 
   button:nth-of-type(even) {
     margin-top: 20%;
-    background: colors.$dark;
+    background: $dark;
     border: none;
     box-shadow: $shadow-main;
   }
@@ -817,7 +816,7 @@ footer {
 
   .ticket-button {
     @include flexCenter();
-    background-color: colors.$primary;
+    background-color: $primary;
     border: solid 1px #ffffff;
     height: 5em;
     width: 5em;

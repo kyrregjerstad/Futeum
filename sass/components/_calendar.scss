@@ -1,7 +1,5 @@
-@use "variables" as *;
-@use "colors";
-@use "fonts" as *;
-@use "mixins" as *;
+@use "../abstracts" as *;
+@use "../base/" as *;
 
 .calendar-headings {
   font-size: 1.5em;
@@ -30,7 +28,7 @@
   @include flexCenter();
   justify-content: space-between;
   width: 100%;
-  background-color: colors.$primary;
+  background-color: $primary;
   border-radius: 2em 2em 0 0;
   padding: 0 1em;
   text-align: center;
@@ -40,7 +38,7 @@
   }
 
   h2 {
-    color: colors.$black;
+    color: $black;
     font-size: 2em;
     text-transform: uppercase;
     margin-bottom: 0.5em;
@@ -110,7 +108,7 @@
 .active-date,
 .timeslots li:hover,
 .active-time {
-  background-color: colors.$primary !important;
+  background-color: $primary !important;
   transition: all 350ms;
   border-radius: 0.5em;
   outline: solid grey 1px;
