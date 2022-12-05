@@ -1,0 +1,10 @@
+@use "../abstracts" as *;
+
+#login-page,
+#tickets-page,
+#checkout-page,
+#success-page {
+  background: $gradient-seconday;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}

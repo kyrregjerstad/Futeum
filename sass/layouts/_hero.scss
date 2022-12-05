@@ -1,0 +1,26 @@
+@use "../abstracts" as *;
+@use "../base/" as *;
+
+.hero {
+  position: relative;
+  width: 100%;
+  margin-bottom: 5em;
+
+  img {
+    width: 100%;
+    max-height: 500px;
+  }
+
+  .hero-title {
+    @include highlighter();
+    padding: 1em 1em 1.5em 1em;
+    transform: translateY(-60%);
+    position: absolute;
+
+    #landing-title {
+      letter-spacing: 0.2em;
+      font-size: 4em;
+      color: $white;
+    }
+  }
+}

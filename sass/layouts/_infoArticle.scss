@@ -1,0 +1,17 @@
+@use "../abstracts" as *;
+
+.info-article {
+  img {
+    width: 100%;
+  }
+
+  p {
+    padding-block: 3em;
+  }
+  .section-title {
+    @include highlighter();
+    padding: 1em;
+    transform: translateY(-60%);
+    position: absolute;
+  }
+}

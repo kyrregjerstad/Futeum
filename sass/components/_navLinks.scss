@@ -1,0 +1,56 @@
+@use "../abstracts" as *;
+@use "../base/" as *;
+
+#nav-links {
+  @include flexCenter();
+  justify-content: space-around;
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+
+  a {
+    @include flexCenter();
+    @include glassMorphism();
+    @include highlighter();
+    width: 30%;
+    margin-block: 0.2em;
+    padding: 2em;
+    border-radius: 1em 0em 1em 0em;
+    text-align: center;
+    text-decoration: underline;
+    font-size: clamp(0.3em, 4vw, 1em);
+    text-decoration-thickness: 0.05em;
+    transition: all 350ms $bezier;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      z-index: -1;
+      filter: blur(2px);
+      opacity: 0.1;
+      transition: all 350ms $bezier;
+    }
+
+    &:hover {
+      transform: scale(1.08);
+      border-radius: 0em 1em 0em 1em;
+    }
+  }
+
+  a:nth-child(2) {
+    border-radius: 0em 0em 1em 1em;
+
+    &:hover {
+      border-radius: 1em 1em 0em 0em;
+    }
+  }
+
+  a:nth-child(3) {
+    border-radius: 0em 1em 0em 1em;
+
+    &:hover {
+      border-radius: 1em 0em 1em 0em;
+    }
+  }
+}

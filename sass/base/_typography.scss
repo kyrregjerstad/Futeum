@@ -1,3 +1,5 @@
+@use "../abstracts" as *;
+
 @font-face {
   font-family: Spotnik;
   src: url(/assets/fonts/SPOTNIK.otf);
@@ -41,3 +43,46 @@
 
 $font-main: Roboto, sans-serif;
 $font-spot: Spotnik, sans-serif;
+
+html {
+  font-family: $font-main;
+}
+
+h1 {
+  font-size: 5em;
+  color: $white;
+  letter-spacing: 0.1em;
+}
+
+h2 {
+  font-size: 1.5em;
+  line-height: 0.5em;
+  letter-spacing: 0.15em;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: $white;
+}
+
+h3 {
+  font-size: 3em;
+  color: $white;
+  padding-inline: $inline-padding;
+}
+
+h4 {
+  font-size: 2em;
+  color: $white;
+  font-weight: 200;
+  @include highlighter();
+  display: inline-block;
+  padding-inline: $inline-padding;
+}
+
+h5 {
+  font-size: 1.5em;
+}
+
+span {
+  font-family: $font-spot;
+  font-weight: bold;
+}

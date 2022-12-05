@@ -1,6 +1,6 @@
 @use "variables" as *;
 @use "colors";
-@use "../base" as *;
+// @use "../base" as *;
 
 @mixin highlighter {
   background: colors.$dark-semiTrans;

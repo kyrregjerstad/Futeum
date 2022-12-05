@@ -1,0 +1,7 @@
+@use "../abstracts" as *;
+
+main {
+  max-width: $tablet-breakpoint;
+  margin: 0 auto;
+  overflow-x: hidden;
+}

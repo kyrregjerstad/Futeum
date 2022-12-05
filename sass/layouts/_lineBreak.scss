@@ -1,0 +1,20 @@
+@use "../abstracts" as *;
+@use "../base/" as *;
+
+.line-break {
+  display: flex;
+  margin-block: 5em 3em;
+
+  &:nth-of-type(odd) {
+    left: unset;
+    right: 0;
+    justify-content: end;
+  }
+
+  hr {
+    border: $hr;
+    border-radius: $border-radius;
+    backdrop-filter: blur(3px);
+    width: 80%;
+  }
+}

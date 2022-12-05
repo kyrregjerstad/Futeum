@@ -1,0 +1,69 @@
+@use "../abstracts" as *;
+@use "../base" as *;
+
+footer {
+  @include flexCenter();
+  height: 500px;
+  background-color: $dark;
+  color: $white;
+
+  .footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2em;
+  }
+
+  #newsletter {
+    display: flex;
+    flex-direction: column;
+
+    h6 {
+      font-size: 1.3em;
+      margin-block: 0.5em;
+    }
+
+    form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    input {
+      border: none;
+      padding: 1em;
+      margin-bottom: 0;
+      border-radius: 1em 0 0 1em;
+      flex: 3;
+
+      &:focus,
+      &:active {
+        outline: none;
+      }
+    }
+
+    button {
+      border: solid white 3px;
+      background-color: $primary;
+      padding: 0.8em;
+      margin-right: 0.22em;
+      color: $white;
+      flex: 1;
+      border-radius: 0 1em 1em 0;
+    }
+  }
+
+  #opening-hours {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding-block: 2em;
+    text-align: justify;
+  }
+
+  .contact-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}

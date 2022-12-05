@@ -1,0 +1,66 @@
+@use "../abstracts" as *;
+@use "../base" as *;
+
+header {
+  @include flexCenter();
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  height: 4em;
+  background-color: $black;
+  box-shadow: $shadow-main;
+
+  .header-logo {
+    display: flex;
+    height: 100%;
+    padding: 0.25em;
+  }
+
+  #navbar-right {
+    @include flexCenter();
+  }
+
+  li {
+    font-family: $font-spot;
+    display: none;
+    padding-inline: 1em;
+  }
+
+  #hamburger-button {
+    background: transparent;
+    border: none;
+    --hamburger-color: #00a66a;
+
+    #hamburger {
+      height: 60px;
+      margin-inline: 2em;
+    }
+
+    .line {
+      transition: translate 300ms 400ms ease-in-out,
+        rotate 300ms 400ms ease-in-out, stroke-dasharray 1000ms $bezier,
+        stroke-dashoffset 1000ms $bezier;
+      stroke-dasharray: 60 31 60 31 60 500;
+      transform-origin: center;
+    }
+
+    &[aria-expanded="true"] .line {
+      translate: 7% 20%;
+      rotate: -45deg;
+      stroke-dasharray: 0 205 60;
+      stroke-dashoffset: -121;
+    }
+
+    &:focus,
+    &:active {
+      outline: none;
+    }
+  }
+
+  @media (min-width: $tablet-breakpoint) {
+    li {
+      display: inline-block;
+    }
+  }
+}

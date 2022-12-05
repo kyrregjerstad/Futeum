@@ -1,0 +1,12 @@
+#success-page {
+  h2,
+  p,
+  a {
+    margin-block: 1em;
+  }
+  .qr-code {
+    max-width: 360px;
+    margin: 0 auto;
+    display: block;
+  }
+}

@@ -1,0 +1,66 @@
+@use "../abstracts" as *;
+
+#login-section {
+  max-width: 636px;
+  margin: 0 auto;
+  padding-inline: 1em;
+  section {
+    display: flex;
+    flex-direction: column;
+    @include glassMorphism();
+    background-color: #ffffff27;
+    padding: 2em;
+    border-radius: 2em;
+    margin-top: 1.5em;
+
+    a {
+      text-decoration: underline;
+      color: black;
+    }
+
+    h1,
+    label {
+      color: #000000;
+      font-weight: bold;
+    }
+
+    #login-header {
+      font-size: 2em;
+      margin-top: 0;
+    }
+
+    label {
+      margin-block: 1.5em 0.3em;
+    }
+
+    input {
+      height: 3rem;
+      border-radius: $border-radius;
+      padding: 1em;
+      border: solid 1px $white-semiTrans;
+      @include glassMorphism();
+      box-shadow: none;
+      transition: box-shadow 300ms;
+
+      &:focus,
+      &:hover {
+        box-shadow: $shadow-main;
+        outline: none;
+      }
+    }
+  }
+
+  button {
+    width: 100%;
+    margin-block: 2em;
+    border: solid 2px $white-semiTrans;
+    box-shadow: none;
+  }
+
+  button:nth-of-type(even) {
+    margin-top: 20%;
+    background: $dark;
+    border: none;
+    box-shadow: $shadow-main;
+  }
+}

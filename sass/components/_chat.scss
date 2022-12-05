@@ -1,0 +1,28 @@
+@use "../abstracts" as *;
+@use "../base/" as *;
+
+.chat-bubble {
+  @include flexCenter();
+  @include glassMorphism();
+  background-color: $primary-semiTrans;
+  width: 2em;
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  border: solid $white;
+}
+
+.chat-bubble::after {
+  // content: "";
+  width: 350px;
+  height: 550px;
+  position: absolute;
+  background-color: $white;
+  border: solid black 2px;
+  border-radius: $border-radius;
+  right: 0;
+  bottom: 0;
+}

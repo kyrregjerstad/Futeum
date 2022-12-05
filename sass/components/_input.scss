@@ -1,0 +1,23 @@
+@use "../abstracts" as *;
+@use "../base" as *;
+
+input,
+textarea {
+  padding: 1em;
+  margin-bottom: 1em;
+  border-radius: $border-radius;
+  outline: none;
+  border: none;
+
+  &:active,
+  &:focus,
+  &:valid {
+    outline: solid 1px $primary;
+    border: none;
+  }
+
+  &:required:invalid {
+    outline: solid 1px red;
+    border: none;
+  }
+}

@@ -1,0 +1,22 @@
+@use "../abstracts" as *;
+
+#contact {
+  @include glassMorphism();
+  max-width: 640px;
+  margin: 2em auto;
+  padding: 2em;
+  border-radius: 2em;
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    #formMessage {
+      height: 15em;
+    }
+
+    button {
+      box-shadow: none;
+    }
+  }
+}
