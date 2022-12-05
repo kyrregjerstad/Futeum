@@ -104,23 +104,44 @@
       </ul>
     </section>
     <main>
-      <div class="hero-container">
-        <picture class="hero-image">
-          <img src="./assets/images/Exhibitions.jpg" alt="" />
+      <section class="hero">
+        <picture>
+          <source
+            media="(min-width: 1600px)"
+            srcset="/assets/images/1600/1600w_hero-exhibitions.webp"
+            1600w
+          />
+          <source
+            media="(min-width: 1024px)"
+            srcset="/assets/images/1024/1024w_hero-exhibitions.webp"
+            1024w
+          />
+          <source
+            media="(max-width: 512px) "
+            srcset="/assets/images/512/512w_hero-exhibitions.webp"
+            512w
+          />
+          <img src="/assets/images/jpg/1024w_hero-exhibitions.jpg" alt="" />
         </picture>
-        <div class="hero-text">
+        <div class="hero-title">
           <h1>Exhibitions</h1>
           <h2>at <span>Futeum</span></h2>
         </div>
+      </section>
+      <section class="intro-text">
+        <p>
+          Come join us at the Futeum where we're committed to making science
+          accessible to all.
+        </p>
+        <p>
+          Over the course of human history, science has developed from our early
+          understanding of fire, wind, water, and earth to exploring everything
+          from galaxies far away to the very building blocks of life itself.
+        </p>
+      </section>
+      <div class="line-break">
+        <hr />
       </div>
-      <!-- <ul class="jump-to-links">
-        <li>Jump to:</li>
-        <li><a href="#">Cosmology</a></li>
-        <li><a href="#">Evolution</a></li>
-        <li><a href="#">Biology and Medicine</a></li>
-        <li><a href="#">Robotics and AI</a></li>
-        <li><a href="#">Ecology</a></li>
-      </ul> -->
       <article class="card" id="cosmology">
         <div class="image-container">
           <picture>
