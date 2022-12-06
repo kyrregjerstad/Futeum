@@ -144,7 +144,7 @@ span {
   align-items: center;
   flex-direction: column;
   margin: 0 auto;
-  max-width: 768px;
+  max-width: 720px;
 }
 
 .calendar {
@@ -154,7 +154,7 @@ span {
   box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);
   margin-inline: 1em;
   width: 100%;
-  max-width: 768px;
+  max-width: 720px;
   box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);
   border-radius: 2em;
 }
@@ -218,7 +218,7 @@ span {
 }
 
 .timeslots-container {
-  max-width: 768px;
+  max-width: 720px;
   margin: 0 auto;
 }
 
@@ -370,6 +370,24 @@ span {
   outline: solid #00a66a 2px;
 }
 
+@media (min-width: 1080px) {
+  .cards-teaser {
+    grid-template-rows: unset;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+  }
+  .cards-teaser img {
+    max-height: 280px;
+    width: 100%;
+  }
+  .cards-teaser .card-teaser-image {
+    width: 100%;
+  }
+  .card-teaser {
+    flex-direction: column;
+    height: 400px;
+  }
+}
 .chat-bubble {
   display: flex;
   justify-content: center;
@@ -419,6 +437,16 @@ input:required:invalid,
 textarea:required:invalid {
   outline: solid 1px red;
   border: none;
+}
+
+.jump-to-links {
+  font-size: 3em;
+  line-height: 1.2em;
+  font-weight: 200;
+  color: #ffffff;
+}
+.jump-to-links li:nth-child(1) {
+  font-weight: 500;
 }
 
 #nav-links {
@@ -621,6 +649,11 @@ footer .contact-info {
   width: 100%;
 }
 
+@media (min-width: 1080px) {
+  .footer-wrapper {
+    max-width: 1200px;
+  }
+}
 header {
   display: flex;
   justify-content: center;
@@ -672,7 +705,7 @@ header #hamburger-button[aria-expanded=true] .line {
 header #hamburger-button:focus, header #hamburger-button:active {
   outline: none;
 }
-@media (min-width: 800px) {
+@media (min-width: 720px) {
   header li {
     display: inline-block;
   }
@@ -684,8 +717,11 @@ header #hamburger-button:focus, header #hamburger-button:active {
   margin-bottom: 5em;
 }
 .hero img {
+  display: inline-block;
   width: 100%;
   max-height: 500px;
+  -webkit-animation: rotate 1s alternate infinite;
+          animation: rotate 1s alternate infinite;
 }
 .hero .hero-title {
   background: rgba(30, 71, 75, 0.6980392157);
@@ -718,6 +754,15 @@ header #hamburger-button:focus, header #hamburger-button:active {
   position: absolute;
 }
 
+.intro-text {
+  font-size: 1.5em;
+  padding-inline: 10px;
+  margin-bottom: 1em;
+}
+.intro-text p {
+  margin-block: 1em;
+}
+
 .line-break {
   display: flex;
   margin-block: 5em 3em;
@@ -736,11 +781,17 @@ header #hamburger-button:focus, header #hamburger-button:active {
 }
 
 main {
-  max-width: 800px;
+  max-width: 720px;
   margin: 0 auto;
   overflow-x: hidden;
 }
 
+@media (min-width: 1080px) {
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
 .section-heading {
   display: flex;
   flex-direction: column;
@@ -910,6 +961,11 @@ details summary > * {
   box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);
 }
 
+@media (min-width: 1080px) {
+  #login-header {
+    font-size: 5em;
+  }
+}
 #success-page h2,
 #success-page p,
 #success-page a {
@@ -923,82 +979,4 @@ details summary > * {
 
 .hidden {
   opacity: 0;
-}
-
-.hero-container {
-  position: relative;
-  margin-bottom: 4em;
-}
-.hero-container .hero-text {
-  position: absolute;
-  bottom: -2em;
-}
-.hero-container .hero-text h1 {
-  padding-left: 0.1em;
-}
-.hero-container .hero-text h2 {
-  background: #1e474b;
-  display: inline;
-  box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);
-  padding-inline: 10px;
-}
-.hero-container .hero-text span {
-  font-size: 0.9em;
-}
-
-.jump-to-links {
-  font-size: 3em;
-  line-height: 1.2em;
-  font-weight: 200;
-  color: #ffffff;
-}
-.jump-to-links li:nth-child(1) {
-  font-weight: 500;
-}
-
-.human6 {
-  display: flex;
-}
-
-.image {
-  width: 100%;
-  fill: #000000;
-}
-
-.intro-text {
-  font-size: 1.5em;
-  padding-inline: 10px;
-  margin-bottom: 1em;
-}
-.intro-text p {
-  margin-block: 1em;
-}
-
-@media (min-width: 1000px) {
-  main {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  .cards-teaser {
-    grid-template-rows: unset;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1em;
-  }
-  .cards-teaser img {
-    max-height: 280px;
-    width: 100%;
-  }
-  .cards-teaser .card-teaser-image {
-    width: 100%;
-  }
-  .card-teaser {
-    flex-direction: column;
-    height: 400px;
-  }
-  .footer-wrapper {
-    max-width: 1200px;
-  }
-  #login-header {
-    font-size: 5em;
-  }
 }/*# sourceMappingURL=style.css.map */

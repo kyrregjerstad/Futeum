@@ -131,3 +131,25 @@
     outline: solid $primary 2px;
   }
 }
+
+@include mq-large {
+  .cards-teaser {
+    grid-template-rows: unset;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+
+    img {
+      max-height: 280px;
+      width: 100%;
+    }
+
+    .card-teaser-image {
+      width: 100%;
+    }
+  }
+
+  .card-teaser {
+    flex-direction: column;
+    height: 400px;
+  }
+}

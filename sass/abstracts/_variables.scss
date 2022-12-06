@@ -1,7 +1,9 @@
+@use "breakpoints" as *;
+
 $border-radius: 1em;
 $shadow-main: -4px 4px 6px rgba(0, 0, 0, 0.15);
 $inline-padding: 10px;
 $bezier: cubic-bezier(0.71, -0.01, 0.35, 1);
 $hr: 3px solid rgba(255, 255, 255, 0.5);
-$tablet-breakpoint: 800px;
-$cal-max-width: 768px;
+$tablet-breakpoint: map-get($breakpoints, "medium");
+$cal-max-width: map-get($breakpoints, "medium");

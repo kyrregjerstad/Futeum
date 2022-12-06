@@ -1,0 +1,12 @@
+@use "../abstracts" as *;
+
+.jump-to-links {
+  font-size: 3em;
+  line-height: 1.2em;
+  font-weight: 200;
+  color: $white;
+
+  li:nth-child(1) {
+    font-weight: 500;
+  }
+}

@@ -67,3 +67,9 @@ footer {
     width: 100%;
   }
 }
+
+@include mq-large {
+  .footer-wrapper {
+    max-width: 1200px;
+  }
+}

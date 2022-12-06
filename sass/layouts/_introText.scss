@@ -1,0 +1,11 @@
+@use "../abstracts" as *;
+
+.intro-text {
+  font-size: 1.5em;
+  padding-inline: $inline-padding;
+  margin-bottom: 1em;
+
+  p {
+    margin-block: 1em;
+  }
+}

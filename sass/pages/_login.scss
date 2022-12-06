@@ -64,3 +64,9 @@
     box-shadow: $shadow-main;
   }
 }
+
+@include mq-large {
+  #login-header {
+    font-size: 5em;
+  }
+}
