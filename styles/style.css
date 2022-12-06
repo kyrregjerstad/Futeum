@@ -252,18 +252,13 @@ span {
 }
 
 .card {
-  margin-top: 10em;
   width: 90%;
-  margin-inline: 5%;
+  margin-inline: auto;
   background-color: #000000;
   border-radius: 2em;
   box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);
 }
-.card img {
-  width: 100%;
-}
 .card .image-container {
-  width: 100%;
   position: relative;
   overflow: hidden;
   border-radius: 2em;
@@ -272,6 +267,7 @@ span {
   position: absolute;
   z-index: 3;
   bottom: 0;
+  transform-origin: center center;
 }
 .card .image-container .card-midground {
   position: absolute;
@@ -287,10 +283,10 @@ span {
   z-index: 3;
 }
 .card .card-title {
-  background: #1e474b;
-  display: inline;
+  background: rgba(30, 71, 75, 0.6980392157);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
   box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);
-  padding-inline: 10px;
   font-weight: 400;
   top: -0.8em;
   position: absolute;
@@ -405,6 +401,7 @@ span {
   width: 75px;
   height: 75px;
   border: solid #ffffff;
+  z-index: 1000;
 }
 
 .chat-bubble::after {
@@ -765,7 +762,7 @@ header #hamburger-button:focus, header #hamburger-button:active {
 
 .line-break {
   display: flex;
-  margin-block: 5em 3em;
+  margin-block: 5em;
 }
 .line-break:nth-of-type(odd) {
   left: unset;
@@ -796,6 +793,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin-block: -2em 0;
 }
 .section-heading.right {
   align-items: flex-end;

@@ -3,17 +3,10 @@
 @use "colors";
 @use "sass:map";
 
-@mixin highlighter {
+@mixin highlighter() {
   background: colors.$dark-semiTrans;
   backdrop-filter: blur(5px);
   box-shadow: $shadow-main;
-}
-
-@mixin headerHighlight() {
-  background: colors.$dark;
-  display: inline;
-  box-shadow: $shadow-main;
-  padding-inline: 10px;
 }
 
 @mixin flexCenter() {
