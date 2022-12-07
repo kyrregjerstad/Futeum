@@ -446,6 +446,17 @@ textarea:required:invalid {
   font-weight: 500;
 }
 
+#map-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-block: 1em;
+}
+
+#location-map {
+  width: 100%;
+}
+
 #nav-links {
   display: flex;
   justify-content: center;

@@ -1,0 +1,12 @@
+@use "../abstracts" as *;
+
+#map-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-block: 1em;
+}
+
+#location-map {
+  width: 100%;
+}
