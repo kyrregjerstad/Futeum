@@ -16,8 +16,8 @@ $gradient-text: linear-gradient(
   90deg,
   rgba(255, 255, 255, 1) 0%,
   rgba(255, 255, 255, 1) 45%,
-  rgba(0, 166, 106, 1) 55%,
-  rgba(0, 166, 106, 1) 100%
+  $primary 55%,
+  $primary 100%
 );
 
 $colors: (

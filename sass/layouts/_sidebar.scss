@@ -22,15 +22,6 @@
   li {
     position: relative;
 
-    a {
-      transition: all 500ms;
-      background: $gradient-text;
-      background-size: 250% 200%;
-      background-clip: text;
-      background-position: left;
-      color: transparent;
-    }
-
     &::after {
       content: "⬤";
       position: absolute;
@@ -47,15 +38,6 @@
       scale: 1.2;
       translate: 0em;
       transition: opacity 0ms 0ms, scale 800ms $bezier, translate 600ms $bezier;
-    }
-
-    &:hover {
-      // list-style: disc;
-      color: $primary;
-
-      a {
-        background-position: right;
-      }
     }
   }
 }

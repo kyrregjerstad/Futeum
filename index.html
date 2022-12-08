@@ -57,23 +57,37 @@
       <div id="navbar-right">
         <nav>
           <ul>
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/faq.html">FAQ</a></li>
-            <li><a href="/contact.html">Contact</a></li>
-            <li><a href="/tickets.html">Tickets</a></li>
+            <li>
+              <a class="text-hover-color" id="active-page" href="/index.html"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a class="text-hover-color" href="/faq.html">FAQ</a>
+            </li>
+            <li>
+              <a class="text-hover-color" href="/contact.html">Contact</a>
+            </li>
+            <li>
+              <a class="text-hover-color" href="/tickets.html">Tickets</a>
+            </li>
           </ul>
         </nav>
         <button
+          type="submit"
           id="hamburger-button"
           aria-expanded="false"
           aria-controls="primary-navigation"
         >
           <svg
+            role="img"
+            aria-describedby="hamburgerMenu"
             stroke="var(--hamburger-color)"
             fill="none"
             id="hamburger"
             viewBox="0 10 100 100"
           >
+            <title id="hamburgerMenu">Hamburger menu</title>
             <path
               d="m 20 40 h 60 a 1 1 0 0 1 0 20 h -60 a 1 1 0 0 0 0 20 h 60 a 1 1 0 0 1 0 20 h -10 c -15 0 -20 0 -20 -20 v -70"
               class="line"
@@ -87,16 +101,22 @@
     </header>
     <section id="sidebar">
       <ul>
-        <li><a href="/account.html">Profile</a></li>
-        <li><a href="/tickets.html">Tickets</a></li>
-        <li><a href="/adults.html">Adults</a></li>
-        <li><a href="/youth.html">Youth</a></li>
-        <li><a href="/children.html">Children</a></li>
-        <li><a href="/exhibitions.html">Exhibitions</a></li>
-        <li><a href="/hours.html">Opening Hours</a></li>
-        <li><a href="/contact.html">Contact</a></li>
-        <li><a href="/about.html">About</a></li>
-        <li><a href="/faq.html">FAQ</a></li>
+        <li>
+          <a class="text-hover-color" href="/account.html">Profile</a>
+        </li>
+        <li><a class="text-hover-color" href="/tickets.html">Tickets</a></li>
+        <li><a class="text-hover-color" href="/adults.html">Adults</a></li>
+        <li><a class="text-hover-color" href="/youth.html">Youth</a></li>
+        <li><a class="text-hover-color" href="/children.html">Children</a></li>
+        <li>
+          <a class="text-hover-color" href="/exhibitions.html">Exhibitions</a>
+        </li>
+        <li>
+          <a class="text-hover-color" href="/hours.html">Opening Hours</a>
+        </li>
+        <li><a class="text-hover-color" href="/contact.html">Contact</a></li>
+        <li><a class="text-hover-color" href="/about.html">About</a></li>
+        <li><a class="text-hover-color" href="/faq.html">FAQ</a></li>
       </ul>
     </section>
     <main>
@@ -391,10 +411,12 @@
       <div class="footer-wrapper">
         <div>
           <div id="newsletter">
-            <h6>Sign up for our weekly newsletter!</h6>
+            <label for="subscribeEmail">
+              <h6>Sign up for our weekly newsletter!</h6>
+            </label>
             <form>
-              <input type="email" placeholder="email" />
-              <button type="submit">Subscribe</button>
+              <input id="subscribeEmail" type="email" placeholder="email" />
+              <button name="Subscribe" type="submit">Subscribe</button>
             </form>
           </div>
           <section>

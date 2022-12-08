@@ -1,0 +1,14 @@
+@use "../abstracts" as *;
+
+.text-hover-color {
+  transition: all 500ms;
+  background: $gradient-text;
+  background-size: 250% 200%;
+  background-clip: text;
+  background-position: left;
+  color: transparent;
+
+  &:hover {
+    background-position: right;
+  }
+}

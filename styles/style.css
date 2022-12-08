@@ -115,6 +115,20 @@ span {
   font-weight: bold;
 }
 
+#active-page {
+  color: #00a66a;
+  position: relative;
+}
+#active-page::before {
+  content: "⬤";
+  position: absolute;
+  left: -2em;
+  color: #00a66a;
+  font-size: 0.5em;
+  translate: 0 15%;
+  transition: opacity 0ms 1s, scale 800ms cubic-bezier(0.71, -0.01, 0.35, 1), translate 600ms cubic-bezier(0.71, -0.01, 0.35, 1);
+}
+
 .button {
   display: flex;
   justify-content: center;
@@ -572,6 +586,19 @@ textarea:required:invalid {
   margin-block: 0.5em;
 }
 
+.text-hover-color {
+  transition: all 500ms;
+  background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 45%, #00a66a 55%, #00a66a 100%);
+  background-size: 250% 200%;
+  -webkit-background-clip: text;
+          background-clip: text;
+  background-position: left;
+  color: transparent;
+}
+.text-hover-color:hover {
+  background-position: right;
+}
+
 .tickets {
   max-width: 650px;
   margin: 0 auto;
@@ -687,6 +714,7 @@ header #navbar-right {
 }
 header li {
   font-family: Spotnik, sans-serif;
+  font-weight: bold;
   display: none;
   padding-inline: 1em;
 }
@@ -834,15 +862,6 @@ main {
 #sidebar li {
   position: relative;
 }
-#sidebar li a {
-  transition: all 500ms;
-  background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 45%, rgb(0, 166, 106) 55%, rgb(0, 166, 106) 100%);
-  background-size: 250% 200%;
-  -webkit-background-clip: text;
-          background-clip: text;
-  background-position: left;
-  color: transparent;
-}
 #sidebar li::after {
   content: "⬤";
   position: absolute;
@@ -858,12 +877,6 @@ main {
   scale: 1.2;
   translate: 0em;
   transition: opacity 0ms 0ms, scale 800ms cubic-bezier(0.71, -0.01, 0.35, 1), translate 600ms cubic-bezier(0.71, -0.01, 0.35, 1);
-}
-#sidebar li:hover {
-  color: #00a66a;
-}
-#sidebar li:hover a {
-  background-position: right;
 }
 
 summary {

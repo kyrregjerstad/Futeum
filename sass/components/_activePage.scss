@@ -1,0 +1,15 @@
+@use "../abstracts" as *;
+#active-page {
+  color: $primary;
+  position: relative;
+
+  &::before {
+    content: "⬤";
+    position: absolute;
+    left: -2em;
+    color: $primary;
+    font-size: 0.5em;
+    translate: 0 15%;
+    transition: opacity 0ms 1s, scale 800ms $bezier, translate 600ms $bezier;
+  }
+}
