@@ -34,7 +34,7 @@ timeline.to(".scroll-anim-c", {
   },
   duration: 5,
   scale: 1.1,
-  x: -20,
+  // x: -20,
   // y: -120,
 });
 timeline.to(".scroll-anim-d", {
