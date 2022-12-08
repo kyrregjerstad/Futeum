@@ -4,7 +4,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-block: 1em;
+  margin-block-start: 1em;
+  // margin: 1em em;
 }
 
 #location-map {

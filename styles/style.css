@@ -464,7 +464,8 @@ textarea:required:invalid {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-block: 1em;
+  -webkit-margin-before: 1em;
+          margin-block-start: 1em;
 }
 
 #location-map {
