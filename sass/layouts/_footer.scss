@@ -3,16 +3,25 @@
 
 footer {
   @include flexCenter();
-  height: 500px;
   background-color: $dark;
   color: $white;
 
   .footer-wrapper {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     padding: 2em;
+  }
+
+  @media (max-width: 1080px) {
+    #footer-grid {
+      display: grid;
+      grid-template-rows: 1fr 2fr 2fr;
+      align-items: flex-start;
+      gap: 5%;
+    }
   }
 
   #newsletter {
@@ -21,7 +30,7 @@ footer {
 
     h6 {
       font-size: 1.3em;
-      margin-block: 0.5em;
+      margin-block-end: 0.5em;
     }
 
     form {
@@ -55,9 +64,10 @@ footer {
   }
 
   #opening-hours {
+    width: 100%;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    padding-block: 2em;
+
     text-align: justify;
   }
 
@@ -69,7 +79,24 @@ footer {
 }
 
 @include mq-large {
-  .footer-wrapper {
+  #footer-grid {
+    display: grid;
+    width: 100%;
     max-width: 1200px;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: flex-start;
+    gap: 5%;
+  }
+
+  #opening-hours {
+    order: 1;
+  }
+
+  #newsletter {
+    order: 2;
+  }
+
+  .contact-info {
+    order: 3;
   }
 }

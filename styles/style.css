@@ -638,16 +638,24 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 500px;
   background-color: #1e474b;
   color: #ffffff;
 }
 footer .footer-wrapper {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   padding: 2em;
+}
+@media (max-width: 1080px) {
+  footer #footer-grid {
+    display: grid;
+    grid-template-rows: 1fr 2fr 2fr;
+    align-items: flex-start;
+    gap: 5%;
+  }
 }
 footer #newsletter {
   display: flex;
@@ -655,7 +663,8 @@ footer #newsletter {
 }
 footer #newsletter h6 {
   font-size: 1.3em;
-  margin-block: 0.5em;
+  -webkit-margin-after: 0.5em;
+          margin-block-end: 0.5em;
 }
 footer #newsletter form {
   display: flex;
@@ -682,9 +691,9 @@ footer #newsletter button {
   border-radius: 0 1em 1em 0;
 }
 footer #opening-hours {
+  width: 100%;
   display: grid;
   grid-template-columns: 2fr 1fr;
-  padding-block: 2em;
   text-align: justify;
 }
 footer .contact-info {
@@ -694,8 +703,22 @@ footer .contact-info {
 }
 
 @media (min-width: 1080px) {
-  .footer-wrapper {
+  #footer-grid {
+    display: grid;
+    width: 100%;
     max-width: 1200px;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: flex-start;
+    gap: 5%;
+  }
+  #opening-hours {
+    order: 1;
+  }
+  #newsletter {
+    order: 2;
+  }
+  .contact-info {
+    order: 3;
   }
 }
 header {
