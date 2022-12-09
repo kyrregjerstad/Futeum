@@ -115,6 +115,11 @@ span {
   font-weight: bold;
 }
 
+@media (max-width: 450px) {
+  h3 {
+    font-size: 2em;
+  }
+}
 #active-page {
   color: #00a66a;
   position: relative;
@@ -133,7 +138,7 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1em 2em;
+  padding: 1em 1em;
   background-color: #00a66a;
   border: 0.1em solid #ffffff;
   box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);
