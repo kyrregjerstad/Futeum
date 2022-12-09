@@ -88,7 +88,23 @@ span {
 }
 
 @media (max-width: map-get($breakpoints, "small")) {
+  h1 {
+    font-size: 3em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
   h3 {
     font-size: 2em;
+  }
+
+  h4 {
+    font-size: 1.5em;
+  }
+
+  h5 {
+    font-size: 1.3em;
   }
 }
