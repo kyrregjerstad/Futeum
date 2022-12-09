@@ -167,6 +167,7 @@ span {
   font-family: Roboto, sans-serif;
   letter-spacing: 0;
   margin: 1em 0;
+  padding-inline: 0.5em;
 }
 
 .cal-container {
@@ -176,6 +177,7 @@ span {
   flex-direction: column;
   margin: 0 auto;
   max-width: 720px;
+  padding-inline: 0.5em;
 }
 
 .calendar {
@@ -251,6 +253,7 @@ span {
 .timeslots-container {
   max-width: 720px;
   margin: 0 auto;
+  padding-inline: 0.5em;
 }
 
 .timeslots {
@@ -280,6 +283,11 @@ span {
   border-radius: 0.5em;
   outline: solid grey 1px;
   cursor: pointer;
+}
+
+.selected-date-and-time {
+  text-transform: none;
+  line-height: 1em;
 }
 
 .card {

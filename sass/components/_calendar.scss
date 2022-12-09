@@ -6,6 +6,7 @@
   font-family: $font-main;
   letter-spacing: 0;
   margin: 1em 0;
+  padding-inline: 0.5em;
 }
 
 .cal-container {
@@ -13,6 +14,7 @@
   flex-direction: column;
   margin: 0 auto;
   max-width: $cal-max-width;
+  padding-inline: 0.5em;
 }
 
 .calendar {
@@ -85,6 +87,7 @@
 .timeslots-container {
   max-width: $cal-max-width;
   margin: 0 auto;
+  padding-inline: 0.5em;
 }
 
 .timeslots {
@@ -113,4 +116,10 @@
   border-radius: 0.5em;
   outline: solid grey 1px;
   cursor: pointer;
+}
+
+.selected-date-and-time {
+  // font-family: Roboto, sans-serif;
+  text-transform: none;
+  line-height: 1em;
 }
