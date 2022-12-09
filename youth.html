@@ -17,7 +17,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="language" content="English" />
     <link rel="shortcut icon" href="/assets/logos/futeum_emblem_11.svg" />
-    <title>Document</title>
+    <title>Futeum | Youth</title>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
       defer
@@ -149,6 +149,14 @@
           Over the course of human history, science has developed from our early
           understanding of fire, wind, water, and earth to exploring everything
           from galaxies far away to the very building blocks of life itself.
+          From the inner workings of the human body to the mysteries of the
+          universe, our exhibits offer a hands-on, interactive experience that
+          will spark your curiosity and inspire your imagination.
+        </p>
+        <p>
+          Whether you're a budding scientist or just curious about the world
+          around you, there's something here for everyone to discover and enjoy.
+          Come and see for yourself the wonders of science!
         </p>
       </section>
       <div class="line-break">
@@ -196,7 +204,7 @@
           </p>
         </section>
       </article>
-      <section>
+      <!-- <section>
         <picture>
           <source
             media="(min-width: 1600px)"
@@ -218,7 +226,7 @@
             alt="a woman wearing a VR headset"
           />
         </picture>
-      </section>
+      </section> -->
       <button class="button">Book free tickets now</button>
     </main>
     <div class="chat-bubble">
@@ -228,57 +236,63 @@
     </div>
     <footer>
       <div class="footer-wrapper">
-        <div>
+        <div id="footer-grid">
           <div id="newsletter">
-            <h6>Sign up for our weekly newsletter!</h6>
+            <label for="subscribeEmail">
+              <h6>Sign up for our weekly newsletter!</h6>
+            </label>
             <form>
-              <input type="email" placeholder="email" />
-              <button type="submit">Subscribe</button>
+              <input id="subscribeEmail" type="email" placeholder="email" />
+              <button name="Subscribe" type="submit">Subscribe</button>
             </form>
           </div>
-          <section>
-            <ul id="opening-hours">
-              <li>Monday:</li>
-              <li>Closed</li>
-              <li>Tuesday:</li>
-              <li>10:00 - 16:00</li>
-              <li>Wednesday:</li>
-              <li>10:00 - 16:00</li>
-              <li>Thursday:</li>
-              <li>10:00 - 16:00</li>
-              <li>Friday:</li>
-              <li>10:00 - 19:00</li>
-              <li>Saturday:</li>
-              <li>10:00 - 16:00</li>
-              <li>Sunday:</li>
-              <li>09:00 - 13:00</li>
-            </ul>
-          </section>
-        </div>
-        <div class="contact-info">
-          <section>
-            <p><strong>Location</strong></p>
-            <p>Potsdamer Str. 58</p>
-            <p>53129</p>
-            <p>Berlin</p>
-            <p>Germany</p>
-          </section>
-          <section>
-            <p><strong>Contact</strong>:</p>
-            <p>info@futeum.com</p>
-            <p>0176 278 4485</p>
-          </section>
+          <ul id="opening-hours">
+            <li>Monday:</li>
+            <li>Closed</li>
+            <li>Tuesday:</li>
+            <li>10:00 - 16:00</li>
+            <li>Wednesday:</li>
+            <li>10:00 - 16:00</li>
+            <li>Thursday:</li>
+            <li>10:00 - 16:00</li>
+            <li>Friday:</li>
+            <li>10:00 - 19:00</li>
+            <li>Saturday:</li>
+            <li>10:00 - 16:00</li>
+            <li>Sunday:</li>
+            <li>09:00 - 13:00</li>
+          </ul>
+          <div class="contact-info">
+            <section>
+              <p><strong>Location</strong></p>
+              <p>Potsdamer Str. 58</p>
+              <p>53129</p>
+              <p>Berlin</p>
+              <p>Germany</p>
+            </section>
+            <section>
+              <p><strong>Contact</strong>:</p>
+              <p><a href="mailto:info@futeum.com">info@futeum.com</a></p>
+              <p>0176 278 4485</p>
+            </section>
+          </div>
         </div>
         <section>
-          <picture>
-            <img src="" alt="" />
-          </picture>
-          <picture>
-            <img src="" alt="" />
-          </picture>
-          <picture>
-            <img src="" alt="" />
-          </picture>
+          <a href="#">
+            <picture>
+              <img src="/assets/icons/icon-fb.svg" alt="" />
+            </picture>
+          </a>
+          <a href="#">
+            <picture>
+              <img src="assets/icons/icon-insta.svg" alt="" />
+            </picture>
+          </a>
+          <a href="#">
+            <picture>
+              <img src="assets/icons/icon-twitter.svg" alt="" />
+            </picture>
+          </a>
         </section>
         <p>&copy; Futeum 2022</p>
       </div>
