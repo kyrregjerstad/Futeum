@@ -822,6 +822,13 @@ header #hamburger-button:focus, header #hamburger-button:active {
   font-size: 4em;
   color: #ffffff;
 }
+@media (max-width: 450px) {
+  .hero .hero-title #landing-title {
+    letter-spacing: 0.2em;
+    font-size: 3em;
+    color: #ffffff;
+  }
+}
 
 .info-article img {
   width: 100%;

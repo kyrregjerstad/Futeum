@@ -24,5 +24,13 @@
       font-size: 4em;
       color: $white;
     }
+
+    @media (max-width: map-get($breakpoints, "small")) {
+      #landing-title {
+        letter-spacing: 0.2em;
+        font-size: 3em;
+        color: $white;
+      }
+    }
   }
 }
