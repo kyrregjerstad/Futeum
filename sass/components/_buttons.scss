@@ -1,7 +1,7 @@
 @use "../abstracts" as *;
 
 .button {
-  @include flexCenter();
+  display: table;
   padding: 1em 1em;
   background-color: $primary;
   border: 0.1em solid $white;

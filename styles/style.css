@@ -147,9 +147,7 @@ span {
 }
 
 .button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: table;
   padding: 1em 1em;
   background-color: #00a66a;
   border: 0.1em solid #ffffff;
@@ -842,7 +840,8 @@ header #hamburger-button:focus, header #hamburger-button:active {
   width: 100%;
 }
 .info-article p {
-  padding-block: 3em;
+  -webkit-padding-before: 1.5em;
+          padding-block-start: 1.5em;
 }
 .info-article .section-title {
   background: rgba(30, 71, 75, 0.6980392157);
