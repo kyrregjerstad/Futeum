@@ -1,0 +1,55 @@
+@use "../abstracts" as *;
+@use "../base/" as *;
+
+.profile-info {
+  @include glassMorphism();
+  padding: 1em;
+  margin: 1em;
+  border-radius: 2em;
+  color: white;
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 1.5em;
+    letter-spacing: normal;
+    text-transform: none;
+    font-weight: bold;
+    line-height: normal;
+    padding: 0;
+    background: none;
+    backdrop-filter: none;
+    box-shadow: none;
+    color: white;
+  }
+
+  div {
+    margin-block: 2em;
+  }
+
+  .pic-and-name {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-block-start: 1em;
+  }
+
+  .newsletter {
+    margin-block: 0;
+
+    * {
+      display: inline-block;
+    }
+  }
+
+  .button {
+    background-color: red;
+    box-shadow: none;
+  }
+}

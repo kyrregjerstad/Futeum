@@ -47,7 +47,7 @@
     <script src="/app/script.js" type="module"></script>
     <link rel="stylesheet" href="/styles/style.css" />
   </head>
-  <body>
+  <body id="account-page">
     <header>
       <a href="/index.html" class="header-logo">
         <picture class="header-logo">
@@ -119,11 +119,12 @@
     </section>
     <main>
       <section class="profile-info">
-        <div>
-          <picture class="profile-photo">
+        <div class="pic-and-name">
+          <picture>
             <img
-              src="/assets/images/512/512w_Ecology.webp"
-              alt="Ice berg in the ocean"
+              class="profile-photo"
+              src="/assets/icons/icon-user.svg"
+              alt="User icon"
             />
           </picture>
           <h1 id="fullName">Albert Einstein</h1>
@@ -154,10 +155,12 @@
         </div>
         <div>
           <h6>Newsletter</h6>
-          <input type="checkbox" name="newsletter" id="" />
-          <p>I want to receive the weekly newsletter</p>
+          <div class="newsletter">
+            <input type="checkbox" name="newsletter" id="" />
+            <p>I want to receive the weekly newsletter</p>
+          </div>
         </div>
-        <button>Delete account</button>
+        <button class="button">Delete account</button>
       </section>
     </main>
     <div class="chat-bubble">

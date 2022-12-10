@@ -618,6 +618,10 @@ textarea:required:invalid {
   margin-block: 0.5em;
 }
 
+.profile-photo {
+  width: 100px;
+}
+
 .text-hover-color {
   transition: all 500ms;
   background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 45%, #00a66a 55%, #00a66a 100%);
@@ -950,10 +954,62 @@ details summary > * {
   display: inline;
 }
 
+.profile-info {
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);
+  padding: 1em;
+  margin: 1em;
+  border-radius: 2em;
+  color: white;
+}
+.profile-info h1 {
+  font-size: 2em;
+}
+.profile-info h2,
+.profile-info h3,
+.profile-info h4,
+.profile-info h5,
+.profile-info h6 {
+  font-size: 1.5em;
+  letter-spacing: normal;
+  text-transform: none;
+  font-weight: bold;
+  line-height: normal;
+  padding: 0;
+  background: none;
+  -webkit-backdrop-filter: none;
+          backdrop-filter: none;
+  box-shadow: none;
+  color: white;
+}
+.profile-info div {
+  margin-block: 2em;
+}
+.profile-info .pic-and-name {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  -webkit-margin-before: 1em;
+          margin-block-start: 1em;
+}
+.profile-info .newsletter {
+  margin-block: 0;
+}
+.profile-info .newsletter * {
+  display: inline-block;
+}
+.profile-info .button {
+  background-color: red;
+  box-shadow: none;
+}
+
 #login-page,
 #tickets-page,
 #checkout-page,
-#success-page {
+#success-page,
+#account-page {
   background: linear-gradient(191.54deg, #00a69c 5.32%, #00a66a 92.1%);
   background-repeat: no-repeat;
   background-attachment: fixed;
