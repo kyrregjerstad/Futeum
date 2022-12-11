@@ -12,6 +12,11 @@
   font-size: 1.5em;
   letter-spacing: 0.06em;
   margin: 1em auto;
+  transition: scale 250ms $bezier;
+
+  &:hover {
+    scale: 1.04;
+  }
 }
 
 .contact {

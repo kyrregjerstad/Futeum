@@ -158,6 +158,10 @@ span {
   font-size: 1.5em;
   letter-spacing: 0.06em;
   margin: 1em auto;
+  transition: scale 250ms cubic-bezier(0.71, -0.01, 0.35, 1);
+}
+.button:hover {
+  scale: 1.04;
 }
 
 .contact {
