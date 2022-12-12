@@ -44,8 +44,12 @@
   .card-title {
     @include highlighter();
     font-weight: 400;
-    top: -1.4em;
-    position: absolute;
+    top: -2em;
+    display: inline-block;
+    // position: absolute;
+    position: relative;
+    transform-origin: bottom;
+    // transform: translateY(-100%);
   }
 
   .card-info {

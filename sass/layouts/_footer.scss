@@ -28,9 +28,18 @@ footer {
     display: flex;
     flex-direction: column;
 
-    h6 {
+    #newsletter-heading {
       font-size: 1.3em;
+      font-weight: 400;
       margin-block-end: 0.5em;
+      font-family: $font-main;
+      text-decoration: none;
+      text-transform: none;
+      backdrop-filter: none;
+      box-shadow: none;
+      padding-inline: 0;
+      letter-spacing: normal;
+      line-height: normal;
     }
 
     form {
@@ -41,7 +50,8 @@ footer {
 
     input {
       border: none;
-      padding: 1em;
+      outline: none;
+      padding: 1.62em;
       margin-bottom: 0;
       border-radius: 1em 0 0 1em;
       flex: 3;
@@ -54,6 +64,8 @@ footer {
 
     button {
       border: solid white 3px;
+      font-weight: bold;
+      font-size: 1.2em;
       background-color: $primary;
       padding: 0.8em;
       margin-right: 0.22em;

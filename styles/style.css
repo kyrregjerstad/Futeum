@@ -338,8 +338,10 @@ span {
           backdrop-filter: blur(5px);
   box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);
   font-weight: 400;
-  top: -1.4em;
-  position: absolute;
+  top: -2em;
+  display: inline-block;
+  position: relative;
+  transform-origin: bottom;
 }
 .card .card-info {
   font-size: 1.2em;
@@ -697,10 +699,20 @@ footer #newsletter {
   display: flex;
   flex-direction: column;
 }
-footer #newsletter h6 {
+footer #newsletter #newsletter-heading {
   font-size: 1.3em;
+  font-weight: 400;
   -webkit-margin-after: 0.5em;
           margin-block-end: 0.5em;
+  font-family: Roboto, sans-serif;
+  text-decoration: none;
+  text-transform: none;
+  -webkit-backdrop-filter: none;
+          backdrop-filter: none;
+  box-shadow: none;
+  padding-inline: 0;
+  letter-spacing: normal;
+  line-height: normal;
 }
 footer #newsletter form {
   display: flex;
@@ -709,7 +721,8 @@ footer #newsletter form {
 }
 footer #newsletter input {
   border: none;
-  padding: 1em;
+  outline: none;
+  padding: 1.62em;
   margin-bottom: 0;
   border-radius: 1em 0 0 1em;
   flex: 3;
@@ -719,6 +732,8 @@ footer #newsletter input:focus, footer #newsletter input:active {
 }
 footer #newsletter button {
   border: solid white 3px;
+  font-weight: bold;
+  font-size: 1.2em;
   background-color: #00a66a;
   padding: 0.8em;
   margin-right: 0.22em;
