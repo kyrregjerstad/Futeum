@@ -120,7 +120,7 @@ span {
     font-size: 3em;
   }
   h2 {
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
   h3 {
     font-size: 2em;
@@ -306,9 +306,7 @@ span {
 .card .image-container {
   position: relative;
   overflow: hidden;
-  border-radius: 2em;
-  -webkit-margin-after: 2em;
-          margin-block-end: 2em;
+  border-radius: 2em 2em 0 0;
 }
 .card .image-container img {
   width: 100%;
@@ -338,15 +336,14 @@ span {
           backdrop-filter: blur(5px);
   box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);
   font-weight: 400;
-  top: -2em;
+  top: -0.8em;
   display: inline-block;
   position: relative;
-  transform-origin: bottom;
 }
 .card .card-info {
   font-size: 1.2em;
   color: #ffffff;
-  padding: 0 1em 2em 1em;
+  padding: 0 1em 1em 1em;
   line-height: 120%;
   text-align: justify;
 }
