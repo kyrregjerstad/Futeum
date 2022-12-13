@@ -31,42 +31,42 @@ a {
 
 @font-face {
   font-family: Spotnik;
-  src: url(/assets/fonts/SPOTNIK.otf);
+  src: url(/assets/fonts/SPOTNIK.woff2);
   font-display: swap;
 }
 @font-face {
   font-family: Spotnik;
-  src: url(/assets/fonts/SPOTNIK-Bold.otf);
+  src: url(/assets/fonts/SPOTNIK-Bold.woff2);
   font-weight: bold;
   font-display: swap;
 }
 @font-face {
   font-family: Roboto;
-  src: url(/assets/fonts/Roboto-Thin.ttf);
+  src: url(/assets/fonts/Roboto-Thin.woff2);
   font-weight: 100;
   font-display: swap;
 }
 @font-face {
   font-family: Roboto;
-  src: url(/assets/fonts/Roboto-Light.ttf);
+  src: url(/assets/fonts/Roboto-Light.woff2);
   font-weight: 300;
   font-display: swap;
 }
 @font-face {
   font-family: Roboto;
-  src: url(/assets/fonts/Roboto-Regular.ttf);
+  src: url(/assets/fonts/Roboto-Regular.woff2);
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
   font-family: Roboto;
-  src: url(/assets/fonts/Roboto-Medium.ttf);
+  src: url(/assets/fonts/Roboto-Medium.woff2);
   font-weight: 500;
   font-display: swap;
 }
 @font-face {
   font-family: Roboto;
-  src: url(/assets/fonts/Roboto-Bold.ttf);
+  src: url(/assets/fonts/Roboto-Bold.woff2);
   font-weight: 700;
 }
 html {
