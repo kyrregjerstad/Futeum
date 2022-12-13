@@ -68,6 +68,7 @@ a {
   font-family: Roboto;
   src: url(/assets/fonts/Roboto-Bold.woff2);
   font-weight: 700;
+  font-display: swap;
 }
 html {
   font-family: Roboto, sans-serif;
