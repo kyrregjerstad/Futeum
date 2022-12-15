@@ -188,7 +188,7 @@ span {
 }
 
 .calendar {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.221);
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
   box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);
@@ -264,7 +264,7 @@ span {
 }
 
 .timeslots {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.221);
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
   box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);
@@ -298,9 +298,15 @@ span {
 }
 
 .card {
+  display: grid;
+  grid-template-columns: 1fr;
   width: 90%;
   margin-inline: auto;
   background-color: #000000;
+  background: rgba(255, 255, 255, 0.221);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);
   border-radius: 2em;
   box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);
 }
@@ -311,6 +317,7 @@ span {
 }
 .card .image-container img {
   width: 100%;
+  height: 100%;
 }
 .card .image-container .card-foreground {
   position: absolute;
@@ -343,7 +350,7 @@ span {
 }
 .card .card-info {
   font-size: 1.2em;
-  color: #ffffff;
+  color: #000000;
   padding: 0 1em 1em 1em;
   line-height: 120%;
   text-align: justify;
@@ -356,7 +363,7 @@ span {
 }
 
 .card-teaser {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.221);
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
   box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);
@@ -368,6 +375,7 @@ span {
   overflow: hidden;
   opacity: 0;
   outline: solid rgba(0, 166, 105, 0) 2px;
+  color: #000000;
   transition: outline 350ms;
 }
 .card-teaser .card-teaser-image {
@@ -437,12 +445,32 @@ span {
     flex-direction: column;
     height: 400px;
   }
+  .card {
+    grid-template-columns: 1fr 1fr;
+  }
+  .card .card-title {
+    position: absolute;
+    top: 0;
+  }
+  .card .card-info {
+    margin-top: 3.5em;
+  }
+  .card .image-container {
+    border-radius: 2em 0 0 2em;
+  }
+  .card:nth-of-type(even) .card-title {
+    right: 0;
+  }
+  .card:nth-of-type(even) .image-container {
+    order: 1;
+    border-radius: 0 2em 2em 0;
+  }
 }
 .chat-bubble {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.221);
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
   box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);
@@ -526,7 +554,7 @@ textarea:required:invalid {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.221);
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
   box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);
@@ -573,7 +601,7 @@ textarea:required:invalid {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.221);
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
   box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);
@@ -931,7 +959,7 @@ main {
 #sidebar {
   position: fixed;
   height: 100%;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.221);
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
   box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);
@@ -977,7 +1005,7 @@ details summary > * {
 }
 
 .profile-info {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.221);
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
   box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);
@@ -1038,7 +1066,7 @@ details summary > * {
 }
 
 #contact {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.221);
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
   box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);
@@ -1070,7 +1098,7 @@ details summary > * {
 #login-section section {
   display: flex;
   flex-direction: column;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.221);
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
   box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);
@@ -1100,7 +1128,7 @@ details summary > * {
   border-radius: 1em;
   padding: 1em;
   border: solid 1px rgba(255, 255, 255, 0.5176470588);
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.221);
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
   box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);

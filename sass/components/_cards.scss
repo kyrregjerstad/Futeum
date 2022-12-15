@@ -1,10 +1,13 @@
 @use "../abstracts" as *;
 
 .card {
+  display: grid;
+  grid-template-columns: 1fr;
   width: 90%;
   margin-inline: auto;
 
   background-color: $black;
+  @include glassMorphism();
   border-radius: 2em;
 
   box-shadow: $shadow-main;
@@ -13,8 +16,10 @@
     position: relative;
     overflow: hidden;
     border-radius: 2em 2em 0 0;
+
     img {
       width: 100%;
+      height: 100%;
     }
 
     .card-foreground {
@@ -45,15 +50,12 @@
     font-weight: 400;
     top: -0.8em;
     display: inline-block;
-    // position: absolute;
     position: relative;
-    // transform-origin: bottom;
-    // transform: translateY(-100%);
   }
 
   .card-info {
     font-size: 1.2em;
-    color: $white;
+    color: $black;
     padding: 0 1em 1em 1em;
     line-height: 120%;
     text-align: justify;
@@ -76,6 +78,7 @@
   overflow: hidden;
   opacity: 0;
   outline: solid #00a66900 2px;
+  color: $black;
   transition: outline 350ms;
 
   .card-teaser-image {
@@ -156,5 +159,32 @@
   .card-teaser {
     flex-direction: column;
     height: 400px;
+  }
+
+  .card {
+    grid-template-columns: 1fr 1fr;
+
+    .card-title {
+      position: absolute;
+      top: 0;
+    }
+
+    .card-info {
+      margin-top: 3.5em;
+    }
+
+    .image-container {
+      border-radius: 2em 0 0 2em;
+    }
+
+    &:nth-of-type(even) {
+      .card-title {
+        right: 0;
+      }
+      .image-container {
+        order: 1;
+        border-radius: 0 2em 2em 0;
+      }
+    }
   }
 }
