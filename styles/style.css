@@ -489,6 +489,7 @@ span {
   height: 75px;
   border: solid #ffffff;
   z-index: 1000;
+  cursor: pointer;
 }
 
 .chat-bubble::after {
@@ -500,6 +501,74 @@ span {
   border-radius: 1em;
   right: 0;
   bottom: 0;
+}
+
+.chat-window {
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  height: 550px;
+  width: 350px;
+  background-color: #ffffff;
+  box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);
+  border-radius: 2em;
+  padding: 1em;
+}
+.chat-window .conversation-container {
+  overflow: auto;
+  height: 90%;
+}
+.chat-window .bot-bubble,
+.chat-window .user-bubble {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00a66a;
+  border-radius: 1em;
+  margin: 1em 4em 1em 0;
+  padding: 1em;
+}
+.chat-window .bot-bubble img,
+.chat-window .user-bubble img {
+  margin-right: 1em;
+}
+.chat-window .user-bubble {
+  background-color: lightblue;
+  margin: 1em 0 1em 4em;
+  flex-direction: row-reverse;
+}
+.chat-window .user-bubble img {
+  margin-right: 0em;
+  margin-left: 1em;
+}
+.chat-window form {
+  position: absolute;
+  display: flex;
+  bottom: 0;
+  width: 100%;
+}
+.chat-window form input {
+  width: 80%;
+}
+
+#close-chat,
+#send-message {
+  background-color: transparent;
+  border: none;
+}
+#close-chat img,
+#send-message img {
+  height: 2em;
+}
+
+#close-chat {
+  right: 1em;
+  position: absolute;
+}
+
+#send-message img {
+  margin-left: 0.5em;
+  transform: translateY(-0.5em);
 }
 
 input,
@@ -1175,4 +1244,8 @@ details summary > * {
 
 .hidden {
   opacity: 0;
+}
+
+.display-none {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

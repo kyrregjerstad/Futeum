@@ -14,6 +14,7 @@
   height: 75px;
   border: solid $white;
   z-index: 1000;
+  cursor: pointer;
 }
 
 .chat-bubble::after {
@@ -26,4 +27,78 @@
   border-radius: $border-radius;
   right: 0;
   bottom: 0;
+}
+
+.chat-window {
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+
+  height: 550px;
+  width: 350px;
+  background-color: $white;
+  box-shadow: $shadow-main;
+  border-radius: 2em;
+  padding: 1em;
+
+  .conversation-container {
+    overflow: auto;
+    height: 90%;
+  }
+
+  .bot-bubble,
+  .user-bubble {
+    @include flexCenter();
+    background-color: $primary;
+    border-radius: 1em;
+    margin: 1em 4em 1em 0;
+    padding: 1em;
+
+    img {
+      margin-right: 1em;
+    }
+  }
+
+  .user-bubble {
+    background-color: lightblue;
+    margin: 1em 0 1em 4em;
+    flex-direction: row-reverse;
+
+    img {
+      margin-right: 0em;
+      margin-left: 1em;
+    }
+  }
+
+  form {
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    width: 100%;
+
+    input {
+      width: 80%;
+    }
+  }
+}
+#close-chat,
+#send-message {
+  background-color: transparent;
+  border: none;
+
+  img {
+    height: 2em;
+  }
+}
+
+#close-chat {
+  right: 1em;
+  position: absolute;
+}
+
+#send-message {
+  img {
+    margin-left: 0.5em;
+    transform: translateY(-0.5em);
+  }
 }
