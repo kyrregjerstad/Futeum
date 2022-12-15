@@ -314,6 +314,7 @@ span {
   position: relative;
   overflow: hidden;
   border-radius: 2em 2em 0 0;
+  background-color: #000000;
 }
 .card .image-container img {
   width: 100%;
@@ -451,8 +452,9 @@ span {
   .card .card-title {
     position: absolute;
     top: 0;
+    font-size: 2.5em;
   }
-  .card .card-info {
+  .card .card-info:nth-of-type(1) {
     margin-top: 3.5em;
   }
   .card .image-container {
@@ -464,6 +466,9 @@ span {
   .card:nth-of-type(even) .image-container {
     order: 1;
     border-radius: 0 2em 2em 0;
+  }
+  .card:nth-of-type(even) .card-date {
+    text-align: end;
   }
 }
 .chat-bubble {
