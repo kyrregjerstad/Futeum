@@ -162,7 +162,7 @@ span {
   transition: scale 250ms cubic-bezier(0.71, -0.01, 0.35, 1);
 }
 .button:hover {
-  scale: 1.04;
+  scale: 1.02;
 }
 
 .contact {
