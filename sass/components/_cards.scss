@@ -71,8 +71,8 @@
 
 .card-teaser {
   @include glassMorphism();
-  display: flex;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
   margin-block: 1em;
   height: 130px;
   border-radius: 1.5em;
@@ -82,8 +82,8 @@
   color: $black;
   transition: outline 350ms;
 
-  .card-teaser-image {
-    width: 25%;
+  .card-teaser-image img {
+    width: 100%;
   }
 
   img {
@@ -158,6 +158,9 @@
   }
 
   .card-teaser {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
     flex-direction: column;
     height: 400px;
   }

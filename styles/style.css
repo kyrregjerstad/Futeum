@@ -368,8 +368,8 @@ span {
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
   box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);
-  display: flex;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
   margin-block: 1em;
   height: 130px;
   border-radius: 1.5em;
@@ -379,8 +379,8 @@ span {
   color: #000000;
   transition: outline 350ms;
 }
-.card-teaser .card-teaser-image {
-  width: 25%;
+.card-teaser .card-teaser-image img {
+  width: 100%;
 }
 .card-teaser img {
   min-height: 100%;
@@ -443,6 +443,9 @@ span {
     width: 100%;
   }
   .card-teaser {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
     flex-direction: column;
     height: 400px;
   }
@@ -1155,7 +1158,13 @@ details summary > * {
 }
 
 .faq-section {
+  background: rgba(255, 255, 255, 0.221);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);
   padding: 0.5em;
+  margin: 1em;
+  border-radius: 0.5em;
 }
 
 #login-section {
