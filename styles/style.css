@@ -492,17 +492,6 @@ span {
   cursor: pointer;
 }
 
-.chat-bubble::after {
-  width: 350px;
-  height: 550px;
-  position: absolute;
-  background-color: #ffffff;
-  border: solid black 2px;
-  border-radius: 1em;
-  right: 0;
-  bottom: 0;
-}
-
 .chat-window {
   position: fixed;
   bottom: 1em;
@@ -559,6 +548,7 @@ span {
 #close-chat img,
 #send-message img {
   height: 2em;
+  background-color: white;
 }
 
 #close-chat {
@@ -646,6 +636,7 @@ textarea:required:invalid {
   text-decoration-thickness: 0.05em;
   transition: all 350ms cubic-bezier(0.71, -0.01, 0.35, 1);
   overflow: hidden;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 #nav-links a img {
   position: absolute;

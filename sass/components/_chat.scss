@@ -17,18 +17,6 @@
   cursor: pointer;
 }
 
-.chat-bubble::after {
-  // content: "";
-  width: 350px;
-  height: 550px;
-  position: absolute;
-  background-color: $white;
-  border: solid black 2px;
-  border-radius: $border-radius;
-  right: 0;
-  bottom: 0;
-}
-
 .chat-window {
   position: fixed;
   bottom: 1em;
@@ -88,6 +76,7 @@
 
   img {
     height: 2em;
+    background-color: white;
   }
 }
 

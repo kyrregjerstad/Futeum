@@ -24,6 +24,9 @@
     transition: all 350ms $bezier;
     overflow: hidden;
 
+    // Safari rounded corners overflow fix
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+
     img {
       position: absolute;
       z-index: -1;
