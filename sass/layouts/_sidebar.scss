@@ -41,3 +41,20 @@
     }
   }
 }
+
+@media (prefers-reduced-motion) {
+  #sidebar {
+    transition: unset;
+
+    li {
+      &::after {
+        transition: unset;
+      }
+
+      &:hover::after {
+        scale: unset;
+        transition: unset;
+      }
+    }
+  }
+}

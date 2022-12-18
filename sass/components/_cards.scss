@@ -196,3 +196,13 @@
     }
   }
 }
+
+@media (prefers-reduced-motion) {
+  .card-teaser {
+    opacity: 1;
+
+    .card-teaser-text {
+      opacity: 1;
+    }
+  }
+}

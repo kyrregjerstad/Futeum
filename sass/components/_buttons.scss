@@ -17,6 +17,12 @@
   &:hover {
     scale: 1.02;
   }
+
+  @media (prefers-reduced-motion) {
+    &:hover {
+      scale: unset;
+    }
+  }
 }
 
 .contact {

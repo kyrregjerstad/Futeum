@@ -164,6 +164,11 @@ span {
 .button:hover {
   scale: 1.02;
 }
+@media (prefers-reduced-motion) {
+  .button:hover {
+    scale: unset;
+  }
+}
 
 .contact {
   padding: 1em 2em;
@@ -474,6 +479,14 @@ span {
     text-align: end;
   }
 }
+@media (prefers-reduced-motion) {
+  .card-teaser {
+    opacity: 1;
+  }
+  .card-teaser .card-teaser-text {
+    opacity: 1;
+  }
+}
 .chat-bubble {
   display: flex;
   justify-content: center;
@@ -740,6 +753,11 @@ textarea:required:invalid {
   background-position: right;
 }
 
+@media (prefers-reduced-motion) {
+  .text-hover-color {
+    transition: unset;
+  }
+}
 .tickets {
   max-width: 650px;
   margin: 0 auto;
@@ -1067,6 +1085,18 @@ main {
   transition: opacity 0ms 0ms, scale 800ms cubic-bezier(0.71, -0.01, 0.35, 1), translate 600ms cubic-bezier(0.71, -0.01, 0.35, 1);
 }
 
+@media (prefers-reduced-motion) {
+  #sidebar {
+    transition: unset;
+  }
+  #sidebar li::after {
+    transition: unset;
+  }
+  #sidebar li:hover::after {
+    scale: unset;
+    transition: unset;
+  }
+}
 summary {
   font-size: 1.5em;
 }

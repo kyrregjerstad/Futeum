@@ -12,3 +12,9 @@
     background-position: right;
   }
 }
+
+@media (prefers-reduced-motion) {
+  .text-hover-color {
+    transition: unset;
+  }
+}
