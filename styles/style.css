@@ -1120,6 +1120,9 @@ details summary > * {
   border-radius: 2em;
   color: white;
 }
+.profile-info a {
+  text-decoration: underline;
+}
 .profile-info h1 {
   font-size: 2em;
 }
@@ -1161,6 +1164,18 @@ details summary > * {
   box-shadow: none;
 }
 
+@media (min-width: 720px) {
+  .profile-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .profile-info .pic-and-name {
+    grid-column: 1/-1;
+  }
+  .profile-info .button {
+    grid-column: 1/-1;
+  }
+}
 #login-page,
 #tickets-page,
 #checkout-page,

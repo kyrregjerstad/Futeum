@@ -8,6 +8,10 @@
   border-radius: 2em;
   color: white;
 
+  a {
+    text-decoration: underline;
+  }
+
   h1 {
     font-size: 2em;
   }
@@ -51,5 +55,20 @@
   .button {
     background-color: red;
     box-shadow: none;
+  }
+}
+
+@media (min-width: map-get($breakpoints, "medium")) {
+  .profile-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .pic-and-name {
+      grid-column: 1 / -1;
+    }
+
+    .button {
+      grid-column: 1 / -1;
+    }
   }
 }
