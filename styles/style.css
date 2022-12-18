@@ -71,7 +71,7 @@ a {
   font-display: swap;
 }
 html {
-  font-family: Roboto, sans-serif;
+  font-family: Roboto, sans-serif, Roboto, Helvetica, Arial, sans-serif;
 }
 
 h1 {
