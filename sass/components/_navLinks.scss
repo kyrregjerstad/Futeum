@@ -24,7 +24,7 @@
     transition: all 350ms $bezier;
     overflow: hidden;
 
-    // Safari rounded corners overflow fix
+    // Safari rounded corners overflow bug fix
     -webkit-mask-image: -webkit-radial-gradient(white, black);
 
     img {
@@ -54,6 +54,14 @@
 
     &:hover {
       border-radius: 1em 0em 1em 0em;
+    }
+  }
+}
+
+@media (prefers-reduced-motion) {
+  #nav-links {
+    a {
+      transition: unset;
     }
   }
 }
